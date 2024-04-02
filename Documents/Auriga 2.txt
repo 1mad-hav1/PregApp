@@ -1,0 +1,19 @@
+Event Name		: AURIGA 2.0
+Event			: Gaming Event- eFootball, Shadow Fight 4 and Subway Surfers
+Registration Fees	: eFootball Tournament - 30rs
+		 	  eFootball 1v1 - 30rs
+		 	  eFootball Co-op 2v2 - 50rs
+		  	  Shadow Fight 4 1v1 - 30rs
+		  	  Subway Surfers - 20rs
+Prize			: eFootball Tournament - 1000rs
+       			  eFootball 1v1 - 50rs
+       			  eFootball Co-op 2v2 - 80rs
+       			  Shadow Fight 4 1v1 - 50rs
+       			  Subway Surfers - For each hour,top scorer gets 100rs
+Venue			:
+Budget			:
+Current Plan of Action  : eFootball Tournament - Players can join on the tournament through registration on google forms. Groups will be formed and matches till the quarter-finals will be conducted online. Semi-finals and Finals will be conducted offline on the day of Bodhi.
+		   	  eFootball 1v1 - Players can register on spot. 2 players plays against each other and winner gets the prize.
+		   	  eFootball Co-op 2v2 - Players can register on spot. 2 teams(each contains 2 players) plays against each other and winners gets the prize.
+		   	  Shadow Fight 4 1v1 - Players can register on spot. 2 players plays against each other and winner gets the prize.
+		   	  Subway Surfers - Players can register on spot. The player who has highest score on each hour gets the prize.
