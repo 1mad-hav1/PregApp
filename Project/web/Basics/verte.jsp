@@ -22,3 +22,4 @@
         </form>
     </body>
 </html>
+select appointments_date , hospital_name from (tbl_appointments a inner join tbl_hospital hh on a.hospital_id)

@@ -15,7 +15,7 @@
         <title>BabyGlow : Hospital Details</title>
     </head>
     <body>
-        <% String hid=request.getParameter("hospid");
+        <% String hid = request.getParameter("hospid");
             if (request.getParameter("btnschedules") != null) {
                 response.sendRedirect("UserViewSchedule.jsp?hid=" + hid);
             }
@@ -64,24 +64,31 @@
                     <%
                         String s = "select * from tbl_doctors d,tbl_hospitalservices h, tbl_services s where h.hospital_id= '" + hid + "' and h.service_id=s.services_id and d.hospitalservices_id=h.hospitalservices_id";
                         ResultSet rs = con.selectCommand(s);
-                        while (rs.next()) {
+
                     %>
                     <td>
+                        <%     while (rs.next()) {%>
+
                         <%=rs.getString("doctors_name")%>
+                        <br>
+                        <% } %>
                     </td>
                     <td>
+                        <% rs.beforeFirst(); 
+                           while (rs.next()) { %>
+
                         <%=rs.getString("services_name")%>
+                        <br>
+                        <% } %>
                     </td>
-                     <%
-                        }
-                    %>
+                   
                 </tr>
                 <tr align="center">
                     <td colspan="3">
                         <input type="submit" value="View Schedules" name="btnschedules">
                     </td>
                 </tr>
-                <% } %>
+                <% }%>
             </table>
         </form>
     </body>
