@@ -22,9 +22,13 @@
                 String address = request.getParameter("txtaddress");
                 String upQry= " update tbl_hospital set hospital_name='"+name+"',hospital_email='"+email+"',hospital_contact='"+contact+"',hospital_address='"+address+"' where hospital_id='"+session.getAttribute("uid")+"'";
                 boolean status = con.executeCommand(upQry);
-            if (status == true) {
-                
-                response.sendRedirect("../Hospital/HospitalProfile.jsp");
+            if (status == true) { %>
+        <script>
+            alert('Details Updated');
+            window.location = "HospitalProfile.jsp";
+        </script>
+        <%
+              
             }
         }
             String selQry = "select * from tbl_hospital where hospital_id='"+session.getAttribute("hid")+"'";

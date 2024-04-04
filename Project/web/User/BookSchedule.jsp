@@ -20,13 +20,14 @@
     <body>
 
         <%
-            String hid = "";
+            String hid = "",did="";
             int rowCount = 0;
             String sid = request.getParameter("sid");
             String selQry3 = "select * from tbl_schedule s,tbl_doctors d where s.doctors_id=d.doctors_id and s.schedule_id='" + sid + "'";
             ResultSet rs3 = con.selectCommand(selQry3);
             if (rs3.next()) {
                 hid = rs3.getString("hospital_id");
+                did=rs3.getString("doctors_id");
             }
             rs3.beforeFirst();
             String selQry = "select * from tbl_scheduleslots s,tbl_slots sl where sl.slots_id=s.slots_id and schedule_id='" + sid + "'";
@@ -39,7 +40,7 @@
             rs.beforeFirst();
             if (request.getParameter("btnsubmit") != null) {
 
-                String ins = "insert into tbl_appointments(user_id,hospital_id,scheduleslots_id,appointments_date,schedule_id) values('" + session.getAttribute("uid") + "','" + hid + "','" + request.getParameter("rdoappointment") + "','" + request.getParameter("txtdate") + "','" + sid + "')";
+                String ins = "insert into tbl_appointments(user_id,hospital_id,scheduleslots_id,appointments_date,doctors_id) values('" + session.getAttribute("uid") + "','" + hid + "','" + request.getParameter("rdoappointment") + "','" + request.getParameter("txtdate") + "','" + did + "')";
                 boolean status = con.executeCommand(ins);
                 if (status) {
                     String upd = "update tbl_scheduleslots set scheduleslots_count=scheduleslots_count+1 where scheduleslots_id='" + request.getParameter("rdoappointment") + "'";
@@ -60,7 +61,9 @@
                 }%>
         <form name="frmBookappointment" method="post">
             <table border="1">
-                <% if (rs3.next()) {%>
+                <% if (rs3.next()) {
+                    
+                %>
                 <tr>
                     <td>Day</td>
                     <td><%=rs3.getString("schedule_day")%></td>
@@ -145,3 +148,4 @@
     </body>
 
 </html>
+ 

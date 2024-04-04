@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>BABY GLOW</title>
+        <title>BabyGlow : Place</title>
     </head>
     <body>
         <%

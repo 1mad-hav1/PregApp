@@ -1,25 +1,36 @@
-<%-- 
-    Document   : verte
-    Created on : 1 Apr, 2024, 5:25:12 PM
-    Author     : kmadh
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <% if (request.getParameter("btn")!=null){
-            out.print(request.getParameter("week1"));
-        } %>
-        <form method="post" name="22">
-        <h1>Hello World!</h1>
-        <input type="date" name="week1">
-        <input type="submit" name="btn">
-        </form>
-    </body>
-</html>
-select appointments_date , hospita  l_name from (tbl_appointments a inner join tbl_hospital hh on a.hospital_id)
+<table border="1" align="center">
+
+    <tr align="center">
+        <td colspan="5">Admin List</td>
+    </tr>
+    <tr >
+        <th >Sl.No</th>
+        <th >Name</th>
+        <th >Email</th>
+        <th >Password</th>
+        <th >Action</th>
+    </tr>
+
+
+    <%        int i = 0;
+        String selQry = "select * from tbl_admin";
+        ResultSet rs = con.selectCommand(selQry);
+        while (rs.next()) {
+
+            i++;
+
+    %>
+    <tr>
+        <td ><%=i%></td>
+        <td ><%=rs.getString("admin_name")%></td>
+        <td ><%=rs.getString("admin_email")%></td>
+        <td ><%=rs.getString("admin_password")%></td>
+        <td ><a href="Admin.jsp?del=<%=rs.getString("admin_id")%>">Delete</a></td>
+    </tr>
+    <%                      }
+
+    %>
+
+
+</table>

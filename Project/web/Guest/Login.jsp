@@ -80,6 +80,12 @@
                         <input type="reset" name="btncancel" value="Cancel">
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2" align="right"><a href="Newuser.jsp">No account? Sign up as a User</a>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right"><a href="HospitalRegistration.jsp">Sign up as Hospital</a>
+                </tr>
             </table>
         </form>
     </body>

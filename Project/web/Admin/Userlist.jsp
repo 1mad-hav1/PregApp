@@ -38,13 +38,15 @@
                     <th>Place</th>
                     <th>Address</th>
                     <th>Action</th>
-                        <%  
+                        <%                            
+                            int i = 0;
                             String selQry = "select * from tbl_user u inner join tbl_place p on u.place_id=p.place_id";
                             ResultSet rs = con.selectCommand(selQry);
                             while (rs.next()) {
+                                i++;
                         %>
                 <tr align="center">
-                    <td><%=rs.getString("user_id")%></td>
+                    <td><%=i%></td>
                     <td><%=rs.getString("user_name")%></td>
                     <td><%=rs.getString("user_contact")%></td>
                     <td><%=rs.getString("user_email")%></td>

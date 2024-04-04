@@ -20,14 +20,19 @@
                 String name = request.getParameter("txtname");
                 String contact = request.getParameter("txtcontact");
                 String address = request.getParameter("txtaddress");
-                String upQry= " update tbl_user set user_name='"+name+"',user_email='"+email+"',user_contact='"+contact+"',user_address='"+address+"' where user_id='"+session.getAttribute("uid")+"'";
+                String upQry = " update tbl_user set user_name='" + name + "',user_email='" + email + "',user_contact='" + contact + "',user_address='" + address + "' where user_id='" + session.getAttribute("uid") + "'";
                 boolean status = con.executeCommand(upQry);
-            if (status == true) {
-                
-                response.sendRedirect("../User/MyProfile.jsp");
+                if (status == true) {
+        %>
+        <script>
+            alert('Details Updated');
+            window.location = "MyProfile.jsp";
+        </script>
+        <%
+                    
+                }
             }
-        }
-            String selQry = "select * from tbl_user where user_id='"+session.getAttribute("uid")+"'";
+            String selQry = "select * from tbl_user where user_id='" + session.getAttribute("uid") + "'";
             ResultSet urs = con.selectCommand(selQry);
             if (urs.next()) {
         %>

@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>BabyGlow : Admin</title>
+        <title>BabyGlow : Admin Registration</title>
     </head>
     <body>
         
@@ -69,40 +69,7 @@
                     <td><input type="submit" value="Reset" name="btnreset"></td>
                 </tr>
             </table>
+            <!--<br><br><br><br>-->
         </form>
     </body>
 </html>
-
-<table border="1" align="center">
-
-
-    <tr >
-        <th >Sl.No</th>
-        <th >Name</th>
-        <th >EMail</th>
-        <th >Password</th>
-        <th >Action</th>
-    </tr>
-
-
-    <%        int i = 0;
-        String selQry = "select * from tbl_admin";
-        ResultSet rs = con.selectCommand(selQry);
-        while (rs.next()) {
-
-            i++;
-
-    %>
-    <tr>
-        <td ><%=i%></td>
-        <td ><%=rs.getString("admin_name")%></td>
-        <td ><%=rs.getString("admin_email")%></td>
-        <td ><%=rs.getString("admin_password")%></td>
-        <td ><a href="Admin.jsp?del=<%=rs.getString("admin_id")%>">Delete</a></td>
-    </tr>
-    <%                      }
-
-    %>
-
-
-</table>

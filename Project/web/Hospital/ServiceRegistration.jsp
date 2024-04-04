@@ -24,7 +24,13 @@
                 while (rs1.next()) {
                     if (request.getParameter(rs1.getString("services_name")) != null) {
                         //String serviceid = request.getParameter(rs1.getString("services_name"));
+                        int flag1=0;
                         String serviceid = rs1.getString("services_id");
+                        String selQry2 = "select * from tbl_hospitalservices where hospital_id='" + session.getAttribute("hid") + "' and service_id='" + serviceid + "'";
+                        ResultSet rs2 = con.selectCommand(selQry2);
+                        if(rs2.next())
+                            flag1=1;
+                        if(flag1==0){
                         String insQry = "insert into tbl_hospitalservices(hospital_id,service_id)values('" + session.getAttribute("hid") + "', '" + serviceid + "') ";
                         boolean status = con.executeCommand(insQry);
                         if (status == false) {
@@ -41,7 +47,8 @@
             window.location = "ServiceList.jsp";
         </script>
         <%
-            } }
+                } }
+            }
         %>
         <form method="post" name="frmServiceregistration">
             <table>

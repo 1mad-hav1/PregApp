@@ -31,11 +31,11 @@
             if (urs.next()) {
         %>
         <form name="frmUserprofile" method="post">
-            <table border="1" align="center" height="300px" width="300px">
+            <table border="1" align="center" height="500" width="500">
                 <tr>
-                    <td colspan="2">
-                        <img src="../Assets/Files/<%=urs.getString("hospital_photo")%>" width="120" height="120"/>
-                        <img src="../Assets/Files/<%=urs.getString("hospital_logo")%>" width="120" height="120"/>
+                    <td colspan="2" align="center">
+                        <img align="top" src="../Assets/Files/<%=urs.getString("hospital_logo")%>" width="120" height="120"/>
+                        <img src="../Assets/Files/<%=urs.getString("hospital_photo")%>" width="200" height="200"/>
                     </td>
                 </tr>
                 <tr>

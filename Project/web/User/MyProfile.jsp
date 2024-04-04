@@ -31,8 +31,8 @@
         <form name="frmUserprofile" method="post">
             <table border="1" align="center" height="300px" width="300px">
                 <tr>
-                    <td colspan="2">
-                        <img src="../Assets/Files/<%=urs.getString("user_photo")%>" width="120" height="120"/>
+                    <td colspan="2" align="center">
+                        <img src="../Assets/Files/<%=urs.getString("user_photo")%>" width="200" height="200"/>
                     </td>
                 </tr>
                 <tr>

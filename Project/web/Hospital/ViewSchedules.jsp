@@ -24,7 +24,9 @@
                 String delQry1 = "delete from tbl_scheduleslots where schedule_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry1);
                 response.sendRedirect("ViewSchedules.jsp");
-            }
+            }else if (request.getParameter("btnappointments") != null) {
+                response.sendRedirect("ViewAppointments.jsp");
+            } 
         %>
         <form name="frmUserlist" method="post">
             <table  align="center" width="1300px" border="1">
@@ -79,7 +81,7 @@
                         <br>
                         <% }%>
                     </td>
-                     <td><%
+                    <td><%
                         rs2.beforeFirst();
                         while (rs2.next()) {
                         %>
@@ -87,17 +89,15 @@
                         <br>
                         <% }%>
                     </td>
-
+                    <td><a href="UpdateSchedule.jsp?up=<%=rs1.getString("schedule_id")%>">Update Time Slots</a></td>
                     <td><a href="ViewSchedules.jsp?del=<%=rs1.getString("schedule_id")%>">Delete</a></td>
-                    <td><a href="UpdateSchedule.jsp?up=<%=rs1.getString("schedule_id")%>">Update</a></td>
-
                 </tr>
                 <tr align="center">
                     <% }
                         }%>
                 </tr>
                 <tr align="center">
-                    <td colspan="8"><input type="submit" value="Add Schedule" name="btnadd"></td>
+                    <td colspan="8"><input type="submit" value="Add Schedule" name="btnadd"><input type="submit" value="View Appointments" name="btnappointments"></td>
                 </tr>
 
             </table>
