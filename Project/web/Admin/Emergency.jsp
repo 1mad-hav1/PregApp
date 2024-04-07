@@ -15,6 +15,7 @@
         <title>BabyGlow : Emergency List</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_emergency where emergency_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
@@ -59,6 +60,7 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
 
 

@@ -3,10 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
-            <file>file:/E:/PregApp/Project/web/Hospital/ViewSchedules.jsp</file>
-            <file>file:/E:/PregApp/Project/web/Hospital/ViewAppointments.jsp</file>
-            <file>file:/E:/PregApp/Project/web/Guest/Newuser.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/index.html</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Login/loginnew.html</file>
+            <file>file:/D:/PregApp/Project/web/Guest/index.html</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Services.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/Login.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Emergency.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/ActionPages/HospitalUploadAction.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Login/image/bg1.jpg</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Admin.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/loginnew.html</file>
+            <file>file:/D:/PregApp/Project/web/Admin/District.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/css/styles.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Place.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/css/styles.css</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/bootstrap.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Assets/ActionPages/DoctorUploadAction.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/style.css</file>
         </group>
     </open-files>
 </project-private>
