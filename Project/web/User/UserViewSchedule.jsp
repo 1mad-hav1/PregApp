@@ -3,11 +3,6 @@
     Created on : 26 Mar, 2024, 6:25:28 PM
     Author     : kmadhw
 --%>
-<%-- 
-    Document   : verte
-    Created on : 31 Mar, 2024, 8:32:39 PM
-    Author     : kmadh
---%>
 
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
