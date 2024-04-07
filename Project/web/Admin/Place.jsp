@@ -16,6 +16,7 @@
         <title>BabyGlow : Place</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <%
 
             if (request.getParameter("btnsubmit") != null) {
@@ -121,3 +122,4 @@
 
 
 </table>
+    <%@include file="Footer.jsp" %>
