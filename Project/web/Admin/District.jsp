@@ -16,7 +16,7 @@
         <title>BabyGlow::District</title>
     </head>
     <body>
-
+        <%@include file="Header.jsp" %>
         <%
 
             if (request.getParameter("btnsubmit") != null) {
@@ -100,3 +100,4 @@
 
 
 </table>
+    <%@include file="Footer.jsp" %>

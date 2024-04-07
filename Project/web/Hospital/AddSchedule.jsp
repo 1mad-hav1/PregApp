@@ -15,7 +15,7 @@
         <title>BabyGlow : Add Schedule</title>
     </head>
     <body>
-
+        <%@include file="Header.jsp" %>
         <%
 
             String selQry = "select * from tbl_slots";
@@ -104,4 +104,5 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>

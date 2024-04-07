@@ -15,7 +15,7 @@
         <title>BabyGlow : Add Emergency Contact</title>
     </head>
     <body>
-
+        <%@include file="Header.jsp" %>
         <%   if (request.getParameter("btnsubmit") != null) {
                 String name = request.getParameter("txtname");
                 String contact = request.getParameter("txtcontact");
@@ -83,6 +83,7 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
                             function getPlace(did)
