@@ -3,11 +3,46 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/PregApp/Project/web/User/HospitalDetails.jsp</file>
             <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
             <file>file:/D:/PregApp/Project/web/User/BookSchedule.jsp</file>
             <file>file:/D:/PregApp/Project/web/User/UserViewSchedule.jsp</file>
             <file>file:/D:/PregApp/Project/web/User/MyAppointments.jsp</file>
+=======
+<<<<<<< HEAD
+            <file>file:/D:/PregApp/Project/web/Admin/index.html</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Login/loginnew.html</file>
+            <file>file:/D:/PregApp/Project/web/Guest/index.html</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Services.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/Login.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Emergency.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/ActionPages/HospitalUploadAction.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Login/image/bg1.jpg</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Admin.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/loginnew.html</file>
+            <file>file:/D:/PregApp/Project/web/Admin/District.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/css/styles.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Place.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/css/styles.css</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/bootstrap.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Assets/ActionPages/DoctorUploadAction.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/style.css</file>
+=======
+>>>>>>> 3ea587c68170073171f3e1817284bce31095ed50
+            <file>file:/E:/PregApp/Project/web/Guest/index.html</file>
+            <file>file:/E:/PregApp/Project/web/Demo%20Code.jsp</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Admin/index.html</file>
+            <file>file:/E:/PregApp/Project/src/java/DB/MailConnection.java</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Main/index.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Main/contact.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Login/register.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Main/blog-single.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Login/loginnew.html</file>
+            <file>file:/E:/PregApp/Project/web/Guest/loginnew.html</file>
+>>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c
         </group>
     </open-files>
 </project-private>

@@ -15,7 +15,11 @@
         <title>BabyGlow : Hospital List</title>
     </head>
     <body>
+<<<<<<< HEAD
         <%--<%@include file="Header.jsp" %>--%>
+=======
+        <%@include file="Header.jsp" %>
+>>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c
         <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_hospital where hospital_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
@@ -93,7 +97,11 @@
             </table>
         </form>
     </body>
+<<<<<<< HEAD
     <%--<%@include file="Footer.jsp" %>--%>
+=======
+    <%@include file="Footer.jsp" %>
+>>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c
 </html>
 
 
