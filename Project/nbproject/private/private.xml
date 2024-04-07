@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
-            <file>file:/E:/PregApp/Project/web/Hospital/ViewSchedules.jsp</file>
-            <file>file:/E:/PregApp/Project/web/Hospital/ViewAppointments.jsp</file>
-            <file>file:/E:/PregApp/Project/web/Guest/Newuser.jsp</file>
+            <file>file:/E:/PregApp/Project/web/Guest/index.html</file>
+            <file>file:/E:/PregApp/Project/web/Demo%20Code.jsp</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Admin/index.html</file>
+            <file>file:/E:/PregApp/Project/src/java/DB/MailConnection.java</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Main/index.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Main/contact.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Login/register.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Main/blog-single.html</file>
+            <file>file:/E:/PregApp/Project/web/Assets/Templates/Login/loginnew.html</file>
         </group>
     </open-files>
 </project-private>
