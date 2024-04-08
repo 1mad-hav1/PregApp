@@ -12,18 +12,11 @@
         <title>BabyGlow : Home</title>
     </head>
     <body>
-        <%
-            if (request.getParameter("btnmyprofile") != null) {
-                response.sendRedirect("../User/MyProfile.jsp");
-            }
-            else if (request.getParameter("btnviewhospital") != null) {
-                response.sendRedirect("ViewHospitals.jsp");
-            }
-        %>
         <form name="frmUserhome" method="post"> 
             <h1>Hello <%=session.getAttribute("uname")%></h1>
-            <input type="submit" value="My Profile" name="btnmyprofile">
-            <input type="submit" value="View Hospitals" name="btnviewhospital">
+            <a href="MyProfile.jsp">Profile</a>
+            <a href="ViewHospitals.jsp">Hospitals</a>
+            <a href="Chat/Chat.jsp">Chat</a>
         </form>
     </body>
 </html>

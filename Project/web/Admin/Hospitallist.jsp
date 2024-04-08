@@ -15,16 +15,23 @@
         <title>BabyGlow : Hospital List</title>
     </head>
     <body>
-<<<<<<< HEAD
+        <!--<<<<<<< HEAD
         <%--<%@include file="Header.jsp" %>--%>
-=======
+=======-->
         <%@include file="Header.jsp" %>
->>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c
-        <%    if (request.getParameter("del") != null) {
-                String delQry = "delete from tbl_hospital where hospital_id='" + request.getParameter("del") + "'";
+        <!-->>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c-->
+        <%    if (request.getParameter("acc") != null) {
+                String delQry = "update tbl_hospital set where hospital_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
                 response.sendRedirect("Hospitallist.jsp");
             }
+            if (request.getParameter("del") != null) {
+                String delQry = "delete from tbl_user where user_id='" + request.getParameter("del") + "'";
+                con.executeCommand(delQry);
+                response.sendRedirect("Userlist.jsp");
+
+            }
+
         %>
         <form name="frmHospitallistt" method="post">
             <table  align="center" width="1300" border="1">
@@ -46,22 +53,21 @@
                     <th>Name</th>
                     <th>Service</th>
                 </tr>
-                        <%
-                            int i = 0, rowCount = 0;
-                            String selQry = "select * from tbl_hospital u inner join tbl_place p on u.place_id=p.place_id ";
-                            ResultSet rs = con.selectCommand(selQry);
-                            while (rs.next()) {
-                                String selQry1 = "select * from tbl_hospitalservices hs, tbl_doctors d, tbl_services s where hs.hospital_id='" + rs.getString("hospital_id") + "' and hs.service_id=s.services_id and hs.hospitalservices_id= d.hospitalservices_id";
-                                ResultSet rs1 = con.selectCommand(selQry1);
-                                while (rs1.next()) {
-                                    if (rs1.last()) {
-                                        rowCount = rs1.getRow();
-                                    }
-                                }
-                                rs1.beforeFirst();
-                                i++;
+                <%                            int i = 0, rowCount = 0;
+                    String selQry = "select * from tbl_hospital u inner join tbl_place p on u.place_id=p.place_id ";
+                    ResultSet rs = con.selectCommand(selQry);
+                    while (rs.next()) {
+                        String selQry1 = "select * from tbl_hospitalservices hs, tbl_doctors d, tbl_services s where hs.hospital_id='" + rs.getString("hospital_id") + "' and hs.service_id=s.services_id and hs.hospitalservices_id= d.hospitalservices_id";
+                        ResultSet rs1 = con.selectCommand(selQry1);
+                        while (rs1.next()) {
+                            if (rs1.last()) {
+                                rowCount = rs1.getRow();
+                            }
+                        }
+                        rs1.beforeFirst();
+                        i++;
 
-                        %>
+                %>
                 <tr align="center">
                     <td ><%=i%></td>
                     <td " colspan="2" align="center">
@@ -75,33 +81,36 @@
                     <td ><%=rs.getString("place_name")%></td>
                     <td ><%=rs.getString("hospital_address")%></td>
                     <td>
-                    <% while (rs1.next()) {
-                    %>
-                    <%=rs1.getString("doctors_name")%>
-                    <br>
-                    <% }%>
+                        <% while (rs1.next()) {
+                        %>
+                        <%=rs1.getString("doctors_name")%>
+                        <br>
+                        <% }%>
                     </td>
                     <td>
-                    <%
-                    rs1.beforeFirst();
-                    while (rs1.next()) {
-                    %>
-                    <%=rs1.getString("services_name")%>
-                <br>
-                <% }%>
-                </td>
-                
+                        <%
+                            rs1.beforeFirst();
+                            while (rs1.next()) {
+                        %>
+                        <%=rs1.getString("services_name")%>
+                        <br>
+                        <% }%>
+                    </td>
+
                     <td><a href="../Assets/Files/<%=rs.getString("hospital_proof")%>">View Proof</a></td>
-                
-                <% }%>
+                    <td ><a href="Hospitallist.jsp?acc=<%=rs.getString("hospital_id")%>">Accept</a></td>
+                    <td ><a href="Hospitallist.jsp?rej=<%=rs.getString("hospital_id")%>">Reject</a></td>
+                    <% }%>
             </table>
+            <%@include file="Footer.jsp" %>
+
         </form>
     </body>
-<<<<<<< HEAD
+    <!--<<<<<<< HEAD
     <%--<%@include file="Footer.jsp" %>--%>
 =======
-    <%@include file="Footer.jsp" %>
->>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c
+    
+>>>>>>> d42f11253efa1ad19e524e573f61476fe4ca351c-->
 </html>
 
 
