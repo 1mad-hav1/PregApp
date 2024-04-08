@@ -88,6 +88,7 @@
                         <% }%>
                     </td>
                     <td>
+<<<<<<< HEAD
                         <%
                             rs1.beforeFirst();
                             while (rs1.next()) {
@@ -101,6 +102,25 @@
                     <td ><a href="Hospitallist.jsp?acc=<%=rs.getString("hospital_id")%>">Accept</a></td>
                     <td ><a href="Hospitallist.jsp?rej=<%=rs.getString("hospital_id")%>">Reject</a></td>
                     <% }%>
+=======
+<<<<<<< HEAD
+                </tr>
+                <% }}%>
+=======
+                    <%
+                    rs1.beforeFirst();
+                    while (rs1.next()) {
+                    %>
+                    <%=rs1.getString("services_name")%>
+                <br>
+                <% }%>
+                </td>
+                
+                    <td><a href="../Assets/Files/<%=rs.getString("hospital_proof")%>">View Proof</a></td>
+                
+                <% }%>
+>>>>>>> 2b06d453ffb74ba35c7093fc629c1b3d0a411f62
+>>>>>>> 320a3b67186f76ba22ff7f85f7bfd6bbafda97be
             </table>
             <%@include file="Footer.jsp" %>
 

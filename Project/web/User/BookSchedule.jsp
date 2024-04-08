@@ -18,7 +18,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
     </head>
     <body>
-
+         <%@include file="Header.jsp" %>
         <%
             String hid = "",did="";
             int rowCount = 0;
@@ -146,6 +146,6 @@
             });
         </script>
     </body>
-
+ <%@include file="Footer.jsp" %>
 </html>
  

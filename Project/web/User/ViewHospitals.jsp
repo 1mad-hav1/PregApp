@@ -15,6 +15,7 @@
         <title>BabyGlow : View Hospitals</title>
     </head>
     <body>
+         <%@include file="Header.jsp" %>
         <form name="frmViewhospitals" method="post">
             <table>
                 <tr>
@@ -41,6 +42,7 @@
             </table>
         </form>
     </body>
+     <%@include file="Footer.jsp" %>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
                         function getHospital(pid)

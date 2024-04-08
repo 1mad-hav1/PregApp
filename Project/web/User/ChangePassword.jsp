@@ -60,6 +60,7 @@
 
     %>
     <body>
+         <%@include file="Header.jsp" %>
         <form name="frmEditUserprofile">
             <table border="1" align="center" height="300px" width="300px">
                 <tr align="center">
@@ -87,5 +88,6 @@
             </table>
         </form>
     </body>
+     <%@include file="Footer.jsp" %>
 </html>
 

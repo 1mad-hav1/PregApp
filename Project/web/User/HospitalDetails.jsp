@@ -15,6 +15,7 @@
         <title>BabyGlow : Hospital Details</title>
     </head>
     <body>
+         <%@include file="Header.jsp" %>
         <% String hid = request.getParameter("hospid");
             if (request.getParameter("btnschedules") != null) {
                 response.sendRedirect("UserViewSchedule.jsp?hid=" + hid);
@@ -92,4 +93,5 @@
             </table>
         </form>
     </body>
+     <%@include file="Footer.jsp" %>
 </html>
