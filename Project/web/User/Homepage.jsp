@@ -12,6 +12,7 @@
         <title>BabyGlow : Home</title>
     </head>
     <body>
+         <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btnmyprofile") != null) {
                 response.sendRedirect("../User/MyProfile.jsp");
@@ -26,4 +27,5 @@
             <input type="submit" value="View Hospitals" name="btnviewhospital">
         </form>
     </body>
+     <%@include file="Footer.jsp" %>
 </html>

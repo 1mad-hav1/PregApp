@@ -20,6 +20,7 @@
         <title>BabyGlow : Schedules List</title>
     </head>
     <body>
+         <%@include file="Header.jsp" %>
         <%
             String hid = request.getParameter("hid");
 
@@ -102,6 +103,7 @@
             </table>
         </form>
     </body>
+     <%@include file="Footer.jsp" %>
 </html>
 
 

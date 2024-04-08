@@ -14,6 +14,7 @@
         <title>BabyGlow : Profile</title>
     </head>
     <body>
+         <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btneditprofile") != null) {
                 response.sendRedirect("../User/EditProfile.jsp");
@@ -68,4 +69,5 @@
             </table>
         </form>
     </body>
+     <%@include file="Footer.jsp" %>
 </html>
