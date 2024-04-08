@@ -106,6 +106,7 @@
 <<<<<<< HEAD
                 </tr>
                 <% }}%>
+<<<<<<< Updated upstream
 =======
                     <%
                     rs1.beforeFirst();
@@ -121,6 +122,8 @@
                 <% }%>
 >>>>>>> 2b06d453ffb74ba35c7093fc629c1b3d0a411f62
 >>>>>>> 320a3b67186f76ba22ff7f85f7bfd6bbafda97be
+=======
+>>>>>>> Stashed changes
             </table>
             <%@include file="Footer.jsp" %>
 

@@ -17,7 +17,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
+        <title>Baby Glow</title>
 		
 		<!-- Favicon -->
                 <link rel="icon" href="../Assets/Templates/Main/img/favicon.png">
@@ -67,7 +67,7 @@
         </div>-->
         <!-- End Preloader -->
 		
-		<!-- Get Pro Button -->
+<!--		Get Pro Button
 		<ul class="pro-features">
 			<a class="get-pro" href="#">Get Pro</a>
 			<li class="big-title">Pro Version Available on Themeforest</li>
@@ -82,7 +82,7 @@
 				<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Buy Pro Version</a>
 			</div>
 		</ul>
-	
+-->	
 		<!-- Header Area -->
 		<header class="header" >
 			<!-- Topbar -->
@@ -93,7 +93,7 @@
 							<!-- Contact -->
 							<ul class="top-link">
 								<li><a href="#">About</a></li>
-								<li><a href="#">Doctors</a></li>
+                                                                <li><a href="./DoctorsList.jsp">Doctors</a></li>
 								<li><a href="#">Contact</a></li>
 								<li><a href="#">FAQ</a></li>
 							</ul>
@@ -102,8 +102,8 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+880 1234 56789</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+								<li><i class="fa fa-phone"></i>+91 1234567890</li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@babyglow.com</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -119,7 +119,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-                                                                    <a href="index.html"><img src="../Assets/Templates/Main/img/logo.png" alt="#"></a>
+                                                                    <a href="./Homepage.jsp"><img src="../Assets/Templates/Main/img/logo.png" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -131,22 +131,11 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
+                                                                                    <li class="active"><a href="./Homepage.jsp">Home</a>											
 											</li>
-											<li><a href="#">Doctos </a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="404.html">404 Error</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="blog-single.html">Blog Details</a></li>
-												</ul>
+                                                                                        <li><a href="./DoctorsList.jsp">Doctos </a></li>
+                                                                                        <li><a href="./ServiceList.jsp">Services </a></li>
+                                                                                        <li><a href="./HospitalProfile.jsp">My Profile</a>
 											</li>
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>
@@ -156,7 +145,7 @@
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="appointment.html" class="btn">Book Appointment</a>
+                                                                    <a href="./ViewSchedules.jsp" class="btn">View Appointment</a>
 								</div>
 							</div>
 						</div>

@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             <file>file:/D:/PregApp/Project/web/User/HospitalDetails.jsp</file>
             <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
@@ -12,6 +13,37 @@
 =======
             <file>file:/E:/PregApp/Project/web/User/Header.jsp</file>
 >>>>>>> 320a3b67186f76ba22ff7f85f7bfd6bbafda97be
+=======
+            <file>file:/D:/PregApp/Project/web/User/HospitalDetails.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/DoctorRegistration.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/HospitalProfile.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/responsive.css</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/DoctorsList.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/HospitalEditProfile.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/font-awesome.min.css</file>
+            <file>file:/D:/PregApp/Project/web/index.html</file>
+            <file>file:/D:/PregApp/Project/web/Guest/loginnew.html</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/UpdateDoctor.jsp</file>
+            <file>file:/D:/PregApp/Project/web/User/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/HospitalChangePassword.jsp</file>
+            <file>file:/D:/PregApp/Project/web/User/BookSchedule.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/bootstrap.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/ViewAppointments.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/UpdateSchedule.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/icofont.css</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/slicknav.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/ServiceList.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/Login.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/Header.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/animate.min.css</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/ViewSchedules.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/AddSchedule.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/index.html</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/ServiceRegistration.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/datepicker.css</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

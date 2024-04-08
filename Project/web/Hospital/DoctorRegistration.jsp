@@ -15,7 +15,7 @@
         <title>BabyGlow : Doctor Registration</title>
     </head>
     <body>
-
+        <%@include file="Header.jsp" %>
 
         <form name="frmDoctorregistration" method="post" enctype="multipart/form-data" action="../Assets/ActionPages/DoctorUploadAction.jsp">
             <table>
@@ -70,5 +70,6 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
 

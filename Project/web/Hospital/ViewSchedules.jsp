@@ -15,6 +15,7 @@
         <title>BabyGlow : Schedules List</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btnadd") != null) {
                 response.sendRedirect("AddSchedule.jsp");
@@ -103,6 +104,7 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
 
 

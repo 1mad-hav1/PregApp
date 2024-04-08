@@ -15,6 +15,7 @@
         <title>BabyGlow : Service Registration</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <%
             String selQry = "select * from tbl_services";
             ResultSet rs = con.selectCommand(selQry);
@@ -71,4 +72,5 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
