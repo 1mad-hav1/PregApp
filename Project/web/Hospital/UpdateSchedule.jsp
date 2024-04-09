@@ -15,7 +15,7 @@
         <title>BabyGlow : Update Schedule</title>
     </head>
     <body>
-
+        <%@include file="Header.jsp" %>
         <%
             String sid = request.getParameter("up");
             String selQry3 = "select * from tbl_schedule s,tbl_doctors d,tbl_scheduleslots ss where s.schedule_id='" + sid + "' and s.doctors_id=d.doctors_id and s.schedule_id=ss.schedule_id";
@@ -92,4 +92,5 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>

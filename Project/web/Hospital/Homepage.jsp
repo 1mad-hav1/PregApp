@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btnmyprofile") != null) {
                 response.sendRedirect("../Hospital/HospitalProfile.jsp");
@@ -31,4 +32,5 @@
             <input type="submit" value="Schedules" name="btnschedule">
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>

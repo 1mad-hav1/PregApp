@@ -15,6 +15,7 @@
         <title>BabyGlow : Hospital Edit Profile</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <% if (request.getParameter("btnsubmit") != null) {
                 String email = request.getParameter("txtemail");
                 String name = request.getParameter("txtname");
@@ -69,5 +70,6 @@
             <% }%>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
 

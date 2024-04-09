@@ -15,6 +15,7 @@
         <title>BabyGlow : Update Doctor</title>
     </head>
     <body>
+        <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btnsubmit") != null) {
                 String email = request.getParameter("txtemail");
@@ -85,5 +86,6 @@
             </table>
         </form>
     </body>
+    <%@include file="Footer.jsp" %>
 </html>
 
