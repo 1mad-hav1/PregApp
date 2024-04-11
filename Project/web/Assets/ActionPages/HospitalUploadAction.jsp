@@ -144,7 +144,7 @@
 <script type="text/javascript">
     alert("Registration Failed");
     setTimeout(function() {
-        window.location.href = '../../Guest/HospitalRegistration.jsp'
+        window.location.href = '../../Guest/HospitalRegistrationn.jsp'
     }, 40);//40millisecend it go to next page
 </script>
 <%

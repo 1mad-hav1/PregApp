@@ -101,7 +101,7 @@
 </script>
 <%
         }
-        else{
+        else{ out.print(InsQry);
             %> 
 <script type="text/javascript">
     alert("Registration Failed");
