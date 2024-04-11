@@ -17,16 +17,25 @@
     <body>
         <%@include file="Header.jsp" %>
         <%    if (request.getParameter("acc") != null) {
-                String delQry = "update tbl_appointments set appointments_cancel=1 where appointments_id='" + request.getParameter("acc") + "'";
-                con.executeCommand(delQry);
-        %>
-       <%    if (request.getParameter("can") != null) {
-                String delQrya = "update tbl_appointments set appointments_cancel=0 where appointments_id='" + request.getParameter("can") + "'";
-                con.executeCommand(delQrya);
+                String UpQry = "update tbl_scheduleslots set scheduleslots_count=scheduleslots_count-1 where scheduleslots_id='" + request.getParameter("ss") + "'";
+                boolean d = con.executeCommand(UpQry);
+                String DelQry = "delete from tbl_appointments where appointments_id='" + request.getParameter("acc") + "'";
+                boolean s = con.executeCommand(DelQry);
+                if (s == true && d == true) {
+
         %>
         <script>
-            alert("Cancellation Requested");
-            window.location = "MyAppointments.jsp";
+            alert("Cancellation Request Accpeted and Appointment Deleted");
+            window.location = "ViewAppointments.jsp";
+        </script>
+        <% }
+        } else if (request.getParameter("rej") != null) {
+            String delQrya = "update tbl_appointments set appointments_cancel=2  where appointments_id='" + request.getParameter("rej") + "'";
+            con.executeCommand(delQrya);
+        %>
+        <script>
+            alert("Cancellation Request Rejected");
+            window.location = "ViewAppointments.jsp";
         </script>
         <%  }
         %>
@@ -48,7 +57,7 @@
                         String selQry1 = "select distinct appointments_date from tbl_appointments where hospital_id='" + session.getAttribute("hid") + "'";
                         ResultSet rs1 = con.selectCommand(selQry1);
                         while (rs1.next()) {
-                            String selQry = "select a.appointments_cancel,a.appointments_date ,d.doctors_name, h.user_name, sl.slots_fromtime, sl.slots_totime, sr.services_name from tbl_appointments a, tbl_user h, tbl_doctors d, tbl_services sr, tbl_hospitalservices hs, tbl_scheduleslots ss, tbl_slots sl where a.hospital_id='" + session.getAttribute("hid") + "' and a.appointments_date='" + rs1.getString("appointments_date") + "' and a.doctors_id=d.doctors_id and a.hospital_id=h.user_id and d.hospitalservices_id=hs.hospitalservices_id and hs.service_id=sr.services_id and a.scheduleslots_id=ss.scheduleslots_id and ss.slots_id=sl.slots_id";
+                            String selQry = "select a.scheduleslots_id,a.appointments_id,a.appointments_cancel,a.appointments_date ,d.doctors_name, h.user_name, sl.slots_fromtime, sl.slots_totime, sr.services_name from tbl_appointments a, tbl_user h, tbl_doctors d, tbl_services sr, tbl_hospitalservices hs, tbl_scheduleslots ss, tbl_slots sl where a.hospital_id='" + session.getAttribute("hid") + "' and a.appointments_date='" + rs1.getString("appointments_date") + "' and a.doctors_id=d.doctors_id and a.hospital_id=h.user_id and d.hospitalservices_id=hs.hospitalservices_id and hs.service_id=sr.services_id and a.scheduleslots_id=ss.scheduleslots_id and ss.slots_id=sl.slots_id";
                             ResultSet rs = con.selectCommand(selQry);
                             while (rs.next()) {
                                 if (rs.last()) {
@@ -71,12 +80,13 @@
                     <% if (rs.getString("appointments_cancel") == null) { %>
                     <td align="center">-</td>
                     <% } else if (rs.getInt("appointments_cancel") == 0) {%>
-                    <td align="center">Cancellation Requested <a href="ViewAppointments.jsp?acc=<%=rs.getString("appointments_id")%>">Accept</a> <a href="ViewAppointments.jsp?rej=<%=rs.getString("appointments_id")%>">Reject</a>
+                    <td align="center">Cancellation Requested <a href="ViewAppointments.jsp?acc=<%=rs.getString("appointments_id")%>">Accept</a> <a href="ViewAppointments.jsp?rej=<%=rs.getString("appointments_id")%>&ss=<%=rs.getString("scheduleslots_id")%>">Reject</a>
                     </td>
                     <% } else if (rs.getInt("appointments_cancel") == 1) {%>
                     <td>Cancellation Accepted</td>
                     <% } else if (rs.getInt("appointments_cancel") == 2) {%>
                     <td>Cancellation Rejected</td>
+                    <% } %>
                 </tr>
                 <tr align="center">
                     <% }
