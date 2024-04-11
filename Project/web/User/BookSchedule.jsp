@@ -18,16 +18,16 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
     </head>
     <body>
-         <%@include file="Header.jsp" %>
+        <%--<%@include file="Header.jsp" %>--%>
         <%
-            String hid = "",did="";
+            String hid = "", did = "";
             int rowCount = 0;
             String sid = request.getParameter("sid");
             String selQry3 = "select * from tbl_schedule s,tbl_doctors d where s.doctors_id=d.doctors_id and s.schedule_id='" + sid + "'";
             ResultSet rs3 = con.selectCommand(selQry3);
             if (rs3.next()) {
                 hid = rs3.getString("hospital_id");
-                did=rs3.getString("doctors_id");
+                did = rs3.getString("doctors_id");
             }
             rs3.beforeFirst();
             String selQry = "select * from tbl_scheduleslots s,tbl_slots sl where sl.slots_id=s.slots_id and schedule_id='" + sid + "'";
@@ -52,17 +52,18 @@
             window.location = "MyAppointments.jsp";</script>
             <%
                 }
-            } else { out.print(ins);
+            } else {
+                out.print(ins);
             %>
-//        <script>
-//            alert("Booking Unsuccessful");
-//            window.location = "BookSchedule.jsp";</script>
+        //        <script>
+            //            alert("Booking Unsuccessful");
+            //            window.location = "BookSchedule.jsp";</script>
             <% }
                 }%>
         <form name="frmBookappointment" method="post">
             <table border="1">
                 <% if (rs3.next()) {
-                    
+
                 %>
                 <tr>
                     <td>Day</td>
@@ -94,7 +95,6 @@
                         <%
                                 }
                             }
-
                         %>
                     </td>
                 </tr>
@@ -119,22 +119,22 @@
                         if (placeholderValue === 'Sunday') {
                             // Enable only Mondays
                             return date.getDay() === 0;
-                        }else if (placeholderValue === 'Monday') {
+                        } else if (placeholderValue === 'Monday') {
                             // Enable only Mondays
                             return date.getDay() === 1;
-                        }else if (placeholderValue === 'Tuesday') {
+                        } else if (placeholderValue === 'Tuesday') {
                             // Enable only Mondays
                             return date.getDay() === 2;
-                        }else if (placeholderValue === 'Wednesday') {
+                        } else if (placeholderValue === 'Wednesday') {
                             // Enable only Mondays
                             return date.getDay() === 3;
-                        }else if (placeholderValue === 'Thursday') {
+                        } else if (placeholderValue === 'Thursday') {
                             // Enable only Mondays
                             return date.getDay() === 4;
-                        }else if (placeholderValue === 'Friday') {
+                        } else if (placeholderValue === 'Friday') {
                             // Enable only Mondays
                             return date.getDay() === 5;
-                        }else if (placeholderValue === 'Saturday') {
+                        } else if (placeholderValue === 'Saturday') {
                             // Enable only Mondays
                             return date.getDay() === 6;
                         } else {
@@ -146,6 +146,5 @@
             });
         </script>
     </body>
- <%@include file="Footer.jsp" %>
+    <%--<%@include file="Footer.jsp" %>--%>
 </html>
- 

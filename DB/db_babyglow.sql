@@ -7,7 +7,7 @@
 # Server OS:                    Win32
 # Target compatibility:         ANSI SQL
 # HeidiSQL version:             4.0
-# Date/time:                    2024-04-04 17:08:39
+# Date/time:                    11-04-2024 13:47:16
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ANSI,NO_BACKSLASH_ESCAPES';*/
@@ -60,8 +60,9 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_appointments" (
   "hospital_id" int(10) unsigned default NULL,
   "doctors_id" int(10) unsigned default NULL,
   "appointments_date" varchar(30) default NULL,
+  "appointments_cancel" int(10) unsigned default NULL,
   PRIMARY KEY  ("appointments_id")
-) AUTO_INCREMENT=17;
+) AUTO_INCREMENT=23;
 
 
 
@@ -71,20 +72,18 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_appointments" (
 
 LOCK TABLES "tbl_appointments" WRITE;
 /*!40000 ALTER TABLE "tbl_appointments" DISABLE KEYS;*/
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('10','9','25','7','5','2024-04-28');
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('11','9','26','7','9','2024-04-21');
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('12','9','27','7','9','2024-04-21');
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('13','9','27','7','9','2024-04-28');
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('14','9','12','8','8','2024-04-28');
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('15','7','26','7','9','2024-04-21');
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date") VALUES
-	('16','9','19','7','5','2024-04-23');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
+	('17','10','9','8','8','2024-04-14',NULL);
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
+	('18','10','45','8','8','2024-04-11',NULL);
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
+	('19','11','46','8','8','2024-04-11',NULL);
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
+	('20','12','46','8','8','2024-04-11',NULL);
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
+	('21','13','10','8','8','2024-04-14',NULL);
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
+	('22','14','46','8','8','2024-04-17','0');
 /*!40000 ALTER TABLE "tbl_appointments" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -114,6 +113,36 @@ REPLACE INTO "tbl_categories" ("categories_id", "categories_name") VALUES
 REPLACE INTO "tbl_categories" ("categories_id", "categories_name") VALUES
 	('5','fweew');
 /*!40000 ALTER TABLE "tbl_categories" ENABLE KEYS;*/
+UNLOCK TABLES;
+
+
+#
+# Table structure for table 'tbl_chat'
+#
+
+CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_chat" (
+  "chat_id" int(10) unsigned NOT NULL auto_increment,
+  "chat_content" varchar(100) NOT NULL,
+  "chat_date" varchar(100) NOT NULL,
+  "user_id" int(10) unsigned NOT NULL,
+  PRIMARY KEY  ("chat_id")
+) AUTO_INCREMENT=6;
+
+
+
+#
+# Dumping data for table 'tbl_chat'
+#
+
+LOCK TABLES "tbl_chat" WRITE;
+/*!40000 ALTER TABLE "tbl_chat" DISABLE KEYS;*/
+REPLACE INTO "tbl_chat" ("chat_id", "chat_content", "chat_date", "user_id") VALUES
+	('4','hii
+','April 08 2024, 06:06 PM','9');
+REPLACE INTO "tbl_chat" ("chat_id", "chat_content", "chat_date", "user_id") VALUES
+	('5','helloo
+','April 08 2024, 06:12 PM','7');
+/*!40000 ALTER TABLE "tbl_chat" ENABLE KEYS;*/
 UNLOCK TABLES;
 
 
@@ -272,8 +301,9 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_hospital" (
   "hospital_contact" bigint(20) unsigned default NULL,
   "hospital_proof" varchar(50) default NULL,
   "hospital_photo" varchar(50) default NULL,
+  "hospital_status" int(10) unsigned default '0',
   PRIMARY KEY  ("hospital_id")
-) AUTO_INCREMENT=11;
+) AUTO_INCREMENT=10;
 
 
 
@@ -283,14 +313,12 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_hospital" (
 
 LOCK TABLES "tbl_hospital" WRITE;
 /*!40000 ALTER TABLE "tbl_hospital" DISABLE KEYS;*/
-REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo") VALUES
-	('7','smitha','1','HospitalLogo_1287.jpg','smitha address','smitha@gmail.com','smitha123','123456789','HospitalProof_1560.jpeg','HospitalPhoto_1670.jpg');
-REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo") VALUES
-	('8','Nirmala','2','HospitalLogo_1763.jpg','nirmala address','nirmala@gmail.com','nirmala123','123456789','HospitalProof_2056.jpg','HospitalPhoto_1283.jpeg');
-REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo") VALUES
-	('9','St George','3','HospitalLogo_1943.jpg','st george address','stgeorge@gmail.com','stg12','1234567890','HospitalProof_1933.webp','HospitalPhoto_1003.jpg');
-REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo") VALUES
-	('10','St George','2','HospitalLogo_1862.jpg','sss','stg@gmail.com','stg123','1234567890','HospitalProof_1535.jpg','HospitalPhoto_1568.webp');
+REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo", "hospital_status") VALUES
+	('7','smitha','1','HospitalLogo_1287.jpg','smitha address','smitha@gmail.com','smitha123','123456789','HospitalProof_1560.jpeg','HospitalPhoto_1670.jpg','1');
+REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo", "hospital_status") VALUES
+	('8','Nirmala','2','HospitalLogo_1763.jpg','nirmala address','nirmala@gmail.com','nirmala123','123456789','HospitalProof_2056.jpg','HospitalPhoto_1283.jpeg','1');
+REPLACE INTO "tbl_hospital" ("hospital_id", "hospital_name", "place_id", "hospital_logo", "hospital_address", "hospital_email", "hospital_password", "hospital_contact", "hospital_proof", "hospital_photo", "hospital_status") VALUES
+	('9','St George','3','HospitalLogo_1943.jpg','st george address','stgeorge@gmail.com','stg12','1234567890','HospitalProof_1933.webp','HospitalPhoto_1003.jpg','0');
 /*!40000 ALTER TABLE "tbl_hospital" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -400,7 +428,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_schedule" (
   "schedule_day" varchar(20) default NULL,
   "doctors_id" int(10) unsigned default NULL,
   PRIMARY KEY  ("schedule_id")
-) AUTO_INCREMENT=26;
+) AUTO_INCREMENT=27;
 
 
 
@@ -422,6 +450,8 @@ REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doct
 	('23','9','Tuesday','11');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
 	('25','9','Sunday','11');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
+	('26','8','Wednesday','8');
 /*!40000 ALTER TABLE "tbl_schedule" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -437,7 +467,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_scheduleslots" (
   "slots_id" int(10) unsigned default NULL,
   "schedule_id" int(10) unsigned default NULL,
   PRIMARY KEY  ("scheduleslots_id")
-) AUTO_INCREMENT=45;
+) AUTO_INCREMENT=48;
 
 
 
@@ -450,15 +480,15 @@ LOCK TABLES "tbl_scheduleslots" WRITE;
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('9','1111','1','1','18');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('10','1111','0','6','18');
+	('10','1111','1','6','18');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('11','1111','0','8','18');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('12','1111','1','11','18');
+	('12','1111','0','11','18');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('19','22','2','2','20');
+	('19','22','0','2','20');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('20','22','1','3','20');
+	('20','22','0','3','20');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('21','22','0','4','20');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
@@ -466,13 +496,13 @@ REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "sche
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('23','22','0','6','20');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('24','2','2','1','19');
+	('24','2','0','1','19');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('25','2','2','2','19');
+	('25','2','0','2','19');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('26','7','2','1','21');
+	('26','7','0','1','21');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('27','7','2','3','21');
+	('27','7','0','3','21');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('37','20','0','1','23');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
@@ -483,6 +513,12 @@ REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "sche
 	('43','3','0','8','25');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('44','3','0','9','25');
+REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
+	('45','20','1','10','26');
+REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
+	('46','20','3','11','26');
+REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
+	('47','20','0','12','26');
 /*!40000 ALTER TABLE "tbl_scheduleslots" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -650,7 +686,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_user" (
   "user_lmp" date default NULL,
   "user_dob" date default NULL,
   PRIMARY KEY  ("user_id")
-) AUTO_INCREMENT=10;
+) AUTO_INCREMENT=15;
 
 
 
@@ -667,6 +703,16 @@ REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "
 ','UserPhoto_1338.jpeg','2024-03-15','2003-01-10');
 REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
 	('9','seetha','1234567890','seetha@gmail.com1','seetha123','2','flat100','UserPhoto_1437.webp','2024-04-01','2020-01-28');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
+	('10','Aswathy','1234567890','aswathyravindran.t02@gmail.com','aswathy1','2','aswathy address','UserPhoto_1109.jpg','2024-04-03','2024-04-10');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
+	('11','Ron','123567890','ronsiby369@gmail.com','ron123','2','Palamattam','UserPhoto_1146.jpg','2024-04-04','2024-04-10');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
+	('12','Elna','123567890','elnathankachan89@gmail.com','elna123','1','kochukudiyil','UserPhoto_1157.jpg','2024-04-04','2024-04-10');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
+	('13','Sharon','123567890','sharonsunny8035@gmail.com','sharon123','2','woww','UserPhoto_1408.jpeg','2024-04-26','2024-04-16');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
+	('14','madhav','1234567890','kmadhav1028@gmail.com','madhav123','2','adadada','UserPhoto_1233.jpg','2024-04-04','2024-04-04');
 /*!40000 ALTER TABLE "tbl_user" ENABLE KEYS;*/
 UNLOCK TABLES;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE;*/

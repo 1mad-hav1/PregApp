@@ -20,10 +20,10 @@
         <%if (request.getParameter("btnsubmit") != null) {
                 String email = request.getParameter("txtemail");
                 String password = request.getParameter("txtpassword");
-                String uselQry = "select * from tbl_user where user_email= '"+email+"' and user_password= '"+password+"' ";
+                String uselQry = "select * from tbl_user where user_email= '"+email+"' and user_password= '"+password+"'";
                 ResultSet urs = con.selectCommand(uselQry);
                 
-                String hselQry = "select * from tbl_hospital where hospital_email= '"+email+"' and hospital_password= '"+password+"' ";
+                String hselQry = "select * from tbl_hospital where hospital_email= '"+email+"' and hospital_password= '"+password+"' and hospital_status=1";
                 ResultSet hrs = con.selectCommand(hselQry);
                 
                 String aselQry = "select * from tbl_admin where admin_email= '"+email+"' and admin_password= '"+password+"' ";

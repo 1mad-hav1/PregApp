@@ -15,6 +15,17 @@
   <script src="../Assets/Templates/Admin/libs/apexcharts/dist/apexcharts.min.js"></script>
   <script src="../Assets/Templates/Admin/libs/simplebar/dist/simplebar.js"></script>
   <script src="../Assets/Templates/Admin/js/dashboard.js"></script>
+    <script>
+                            function sendMail()
+                            {
+                                $.ajax({
+                                    url: "../Assets/AjaxPages/AjaxMail.jsp",
+                                    success: function(html) {
+                                       alert(html);
+                                    }
+                                });
+                            }
+    </script>
 </body>
 
 </html>
