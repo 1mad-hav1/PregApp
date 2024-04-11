@@ -15,14 +15,13 @@
         <title>BabyGlow : Hospital List</title>
     </head>
     <body>
-   
+
         <%@include file="Header.jsp" %>
         <%    if (request.getParameter("acc") != null) {
                 String upQry = "update tbl_hospital set hospital_status=1 where hospital_id='" + request.getParameter("acc") + "'";
                 con.executeCommand(upQry);
                 response.sendRedirect("Hospitallist.jsp");
-            }
-            else  if (request.getParameter("rej") != null) {
+            } else if (request.getParameter("rej") != null) {
                 String upQry = "update tbl_hospital set hospital_status=0 where hospital_id='" + request.getParameter("rej") + "'";
                 con.executeCommand(upQry);
                 response.sendRedirect("Hospitallist.jsp");
@@ -42,7 +41,7 @@
                     <th rowspan="2">Place</th>
                     <th rowspan="2">Address</th>
                     <th colspan="2">Doctor</th>
-                    <th rowspan="2">Action</th>
+                    <th rowspan="2" colspan="3">Action</th>
                 </tr>
                 <tr align="center">
                     <th>Name</th>
@@ -89,38 +88,19 @@
                         %>
                         <%=rs1.getString("services_name")%>
                         <br>
-                        <% } %>
+                        <% }%>
                     </td>
 
                     <td><a href="../Assets/Files/<%=rs.getString("hospital_proof")%>">View Proof</a></td>
+                    <% if (rs.getInt("hospital_status") == 0) {%>
                     <td ><a href="Hospitallist.jsp?acc=<%=rs.getString("hospital_id")%>">Accept</a></td>
+                    <td>Rejected</td>
+                    <% } else {%>
+                    <td>Accepted</td>
                     <td ><a href="Hospitallist.jsp?rej=<%=rs.getString("hospital_id")%>">Reject</a></td>
-                   
-
+                    <% } %>
                 </tr>
-<<<<<<< HEAD
-               <% } %>
-=======
-                <% }}%>
-<<<<<<< Updated upstream
-=======
-                    <%
-                    rs1.beforeFirst();
-                    while (rs1.next()) {
-                    %>
-                    <%=rs1.getString("services_name")%>
-                <br>
                 <% }%>
-                </td>
-                
-                    <td><a href="../Assets/Files/<%=rs.getString("hospital_proof")%>">View Proof</a></td>
-                
-                <% }%>
->>>>>>> 2b06d453ffb74ba35c7093fc629c1b3d0a411f62
->>>>>>> 320a3b67186f76ba22ff7f85f7bfd6bbafda97be
-=======
->>>>>>> Stashed changes
->>>>>>> f0c56b2750f4f55796a16e74c0f735dc6b058cf9
             </table>
             <%@include file="Footer.jsp" %>
 
