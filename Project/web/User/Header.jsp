@@ -81,9 +81,9 @@
         <!-- Get Pro Button -->
 
         <!-- Header Area -->
-        <header class="header" >
+        <header class="header"  style="height: 150px ">
             <!-- Topbar -->
-            <div class="topbar"  style="background-color: #FFF1EE;">
+            <div class="topbar"  style="background-color: #FFF1EE; ">
             <div class="container">
                 <div class="row">
                     <!--						<div class="col-lg-6 col-md-5 col-12">
@@ -141,6 +141,7 @@
                         <div class="col-lg-7 col-md-7 col-12">-->
                             <div class="get-quote">
                                 <a href="./MyAppointments.jsp" class="btn">My Appointment</a>
+                                
                             </div>
                         </div>
                             
