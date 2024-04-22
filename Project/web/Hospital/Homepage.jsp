@@ -4,14 +4,21 @@
     Author     : kmadh
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+<%@page import="java.sql.ResultSet"%>
+<jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>BabyGlow : Hospital Homepage</title>
+            <style>
+        .inline {
+            display: inline-block;
+            vertical-align: middle; /* Optional: Align elements vertically */
+        }
+    </style>
+        </head>
+        <body>
         <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btnmyprofile") != null) {
@@ -23,14 +30,19 @@
             } else if (request.getParameter("btnschedule") != null) {
                 response.sendRedirect("ViewSchedules.jsp");
             }
+            String selQry = "select * from tbl_hospital u inner join tbl_place p on u.place_id=p.place_id where u.hospital_id='"+session.getAttribute("hid")+"'";
+            ResultSet rs = con.selectCommand(selQry);
+            if(rs.next()){
         %>
         <form name="frmHospitalHome" method="post">
-            <h1>Hello <%=session.getAttribute("hname")%></h1>
-            <input type="submit" value="My Profile" name="btnmyprofile">
-            <input type="submit" value="View Services" name="btnviewservice">
-            <input type="submit" value="Doctors List" name="btndoctorlist">
-            <input type="submit" value="Schedules" name="btnschedule">
+            <img src="../Assets/Files/<%=rs.getString("hospital_logo")%>" width="150px" class="inline">
+            <h1 class="inline"><%=session.getAttribute("hname")%> Hospital,<%=rs.getString("place_name")%></h1>
+            <br>
+            
         </form>
+            <%
+            }
+        %>
     </body>
-    <%@include file="Footer.jsp" %>
+    <%--<%@include file="Footer.jsp" %>--%>
 </html>

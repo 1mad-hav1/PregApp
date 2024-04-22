@@ -48,7 +48,12 @@
         <link rel="stylesheet" href="../Assets/Templates/Main/css/normalize.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/style.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/css/responsive.css">
-
+         <style>
+        .content-wrapper {
+            background-color: pink;
+            padding: 20px; /* Adjust padding as needed */
+        }
+    </style>
     </head>
     <body>      
         <!--		 Preloader 

@@ -85,13 +85,16 @@
             }
 
         }
-        String InsQry = "insert into tbl_user (user_name,user_contact,user_email,user_password,user_dob,user_lmp,place_id,user_address,user_photo)"
-                + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[4] + "','" + value[5] + "','" + value[7] + "','" + value[8] + "','" + photo + "')";
 
-        System.out.println(InsQry);
-        boolean status = obj.executeCommand(InsQry);
+        if (value[4].equals(value[3])) {
 
-        if (status == true) {
+            String InsQry = "insert into tbl_user (user_name,user_contact,user_email,user_password,user_dob,user_lmp,place_id,user_address,user_photo)"
+                    + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[5] + "','" + value[6] + "','" + value[8] + "','" + value[9] + "','" + photo + "')";
+
+            System.out.println(InsQry);
+            boolean status = obj.executeCommand(InsQry);
+
+            if (status == true) {
 %> 
 <script type="text/javascript">
     alert("Registration Completed");
@@ -100,11 +103,20 @@
     }, 40);//40millisecend it go to next page
 </script>
 <%
-        }
-        else{ out.print(InsQry);
-            %> 
+} else {
+    out.print(InsQry);
+%> 
 <script type="text/javascript">
     alert("Registration Failed");
+    setTimeout(function() {
+        window.location.href = '../../Guest/Newuser.jsp'
+    }, 40);//40millisecend it go to next page
+</script>
+<%
+    }
+} else {     %> 
+<script type="text/javascript">
+    alert("Passwords do not match");
     setTimeout(function() {
         window.location.href = '../../Guest/Newuser.jsp'
     }, 40);//40millisecend it go to next page

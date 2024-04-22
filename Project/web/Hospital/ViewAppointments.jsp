@@ -19,13 +19,13 @@
         <%    if (request.getParameter("acc") != null) {
                 String UpQry = "update tbl_scheduleslots set scheduleslots_count=scheduleslots_count-1 where scheduleslots_id='" + request.getParameter("ss") + "'";
                 boolean d = con.executeCommand(UpQry);
-                String DelQry = "delete from tbl_appointments where appointments_id='" + request.getParameter("acc") + "'";
-                boolean s = con.executeCommand(DelQry);
-                if (s == true && d == true) {
+                String UpQry1="update tbl_appointments set appointments_cancel=1  where appointments_id='" + request.getParameter("rej") + "'";
+                boolean s = con.executeCommand(UpQry1);
+                if (s==true && d == true) {
 
         %>
         <script>
-            alert("Cancellation Request Accpeted and Appointment Deleted");
+            alert("Cancellation Request Accpeted");
             window.location = "ViewAppointments.jsp";
         </script>
         <% }

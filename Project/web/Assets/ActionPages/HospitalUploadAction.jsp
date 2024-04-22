@@ -124,13 +124,13 @@
             }
 
         }
-        String InsQry = "insert into tbl_hospital(hospital_name,hospital_contact,hospital_email,hospital_password,place_id,hospital_address,hospital_logo,hospital_proof,hospital_photo)"
-                + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[5] + "','" + value[6] + "','" + logo + "','" + proof + "','" + photo + "')";
+        if (value[3].equals(value[4])) {
+            String InsQry = "insert into tbl_hospital(hospital_name,hospital_contact,hospital_email,hospital_password,place_id,hospital_address,hospital_logo,hospital_proof,hospital_photo)"
+                    + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[6] + "','" + value[7] + "','" + logo + "','" + proof + "','" + photo + "')";
+            System.out.println(InsQry);
+            boolean status = obj.executeCommand(InsQry);
 
-        System.out.println(InsQry);
-        boolean status = obj.executeCommand(InsQry);
-
-        if (status == true) {
+            if (status == true) {
 %> 
 <script type="text/javascript">
     alert("Registration Completed");
@@ -145,6 +145,15 @@
     alert("Registration Failed");
     setTimeout(function() {
         window.location.href = '../../Guest/HospitalRegistrationn.jsp'
+    }, 40);//40millisecend it go to next page
+</script>
+<%
+        } } else {
+            %> 
+<script type="text/javascript">
+    alert("Passwords do not match");
+    setTimeout(function() {
+        window.location.href = '../../Guest/HospitalRegistration.jsp'
     }, 40);//40millisecend it go to next page
 </script>
 <%
