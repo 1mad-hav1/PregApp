@@ -1,29 +1,31 @@
 <%-- 
-    Document   : Login.jsp
-    Created on : 18 Mar, 2024, 5:20:28 PM
+    Document   : Loginn
+    Created on : 10 Apr, 2024, 10:50:20 AM
     Author     : PRITHVIRAJ
 --%>
-
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
-
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>BabyGlow: Login</title>
-    </head>
-    <body>
-
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="../Assets/Templates/Login/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
         <%if (request.getParameter("btnsubmit") != null) {
                 String email = request.getParameter("txtemail");
                 String password = request.getParameter("txtpassword");
-                String uselQry = "select * from tbl_user where user_email= '"+email+"' and user_password= '"+password+"'";
+                String uselQry = "select * from tbl_user where user_email= '"+email+"' and user_password= '"+password+"' ";
                 ResultSet urs = con.selectCommand(uselQry);
                 
-                String hselQry = "select * from tbl_hospital where hospital_email= '"+email+"' and hospital_password= '"+password+"' and hospital_status=1";
+                String hselQry = "select * from tbl_hospital where hospital_email= '"+email+"' and hospital_password= '"+password+"' ";
                 ResultSet hrs = con.selectCommand(hselQry);
                 
                 String aselQry = "select * from tbl_admin where admin_email= '"+email+"' and admin_password= '"+password+"' ";
@@ -56,40 +58,43 @@
             }
 
         %>
+    
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 form-container">
+				<div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+					<div class="logo mt-5 mb-3">
+                                            <img src="../Assets/Templates/Login/image/logo1-Photoroom.png-Photoroom.png" width="150px">
+					</div>
+					<div class="heading mb-3">
+						<h4>Login into your account</h4>
+					</div>
+					<form>
+						<div class="form-input">
+							<span><i class="fa fa-envelope"></i></span>
+							<input type="email" name="txtemail" placeholder="Email Address" required>
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-lock"></i></span>
+							<input type="password" name="txtpassword" placeholder="Password" required>
+						</div>
+						<div class="text-left mb-3">
+                                                    <Button type="submit" name="btnsubmit" class="btn">Login</button>
+						</div>
+						<div class="text-white">Don't have an account?
+                                                    <a href="./Newuserr.jsp" class="register-link">Register here</a>
+						</div>
+                                                <div class="text-white">OR
+						</div>
+                                                <div class="text-white">
+                                                    <a href="./HospitalRegistrationn.jsp" class="register-link">Register as Hospital</a>
+						</div>
+					</form>
+				</div>
+			</div>
 
-
-
-
-
-        <form method="post" name="frmdistrict">
-            <table>
-                <tr>
-                    <td align="center" colspan="2">Login</td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="email" name="txtemail" placeholder="Enter Email" required=""></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="txtpassword" placeholder="Enter Password" required=""></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <input type="submit" name="btnsubmit" value="Submit">
-                        <input type="reset" name="btncancel" value="Cancel">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="right"><a href="Newuser.jsp">No account? Sign up as a User</a>
-                </tr>
-                <tr>
-                    <td colspan="2" align="right"><a href="HospitalRegistration.jsp">Sign up as Hospital</a>
-                </tr>
-            </table>
-        </form>
-    </body>
+			<div class="col-lg-6 col-md-6 d-none d-md-block image-container"></div>
+		</div>
+	</div>
+</body>
 </html>
-
-
-
