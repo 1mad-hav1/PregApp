@@ -48,11 +48,17 @@
         <link rel="stylesheet" href="../Assets/Templates/Main/css/normalize.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/style.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/css/responsive.css">
+        
          <style>
         .content-wrapper {
             background-color: pink;
             padding: 20px; /* Adjust padding as needed */
         }
+            body {
+                background-color: #FFF1EE;
+            }
+           
+        
     </style>
     </head>
     <body>      
@@ -77,51 +83,51 @@
         <!-- Header Area -->
         <header class="header" >
             <!-- Topbar -->
-            <!--div class="topbar">
-                                            <div class="container">
-                                                    <div class="row">
-                                                            <div class="col-lg-6 col-md-5 col-12">
-                                                                     Contact 
-                                                                    <ul class="top-link">
-                                                                            <li><a href="#">About</a></li>
-                                                                            <li><a href="#">Doctors</a></li>
-                                                                            <li><a href="#">Contact</a></li>
-                                                                            <li><a href="#">FAQ</a></li>
-                                                                    </ul>
-            <!-- End Contact 
-    </div>
-    <div class="col-lg-6 col-md-7 col-12">
-             Top Contact 
-            <ul class="top-contact">
-                    <li><i class="fa fa-phone"></i>+880 1234 56789</li>
-                    <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
-            </ul>
-             End Top Contact 
-    </div>
-</div>
-</div>
-        </div>-->
+            <div class="topbar"  style="background-color: #FFF1EE;">
+            <div class="container">
+                <div class="row">
+                    <!--						<div class="col-lg-6 col-md-5 col-12">
+                                                                             Contact 
+                                                                            <ul class="top-link">
+                                                                                    <li><a href="#">About</a></li>
+                                                                                    <li><a href="./DoctorsList.jsp">Doctors</a></li>
+                                                                                    <li><a href="#">Contact</a></li>
+                                                                                    <li><a href="#">FAQ</a></li>
+                                                                            </ul>
+                                                                             End Contact 
+                                                                    </div>-->
+                    <div class="col-lg-6 col-md-7 col-12" >
+                        <!-- Top Contact -->
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>+91 1234567890</li>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:babyglow2024@gmail.com">babyglow2024@gmail.com</a></li>
+                        </ul>
+                        <!-- End Top Contact -->
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End Topbar -->
         <!-- Header Inner -->
-        <div class="header-inner">
+        <div class="header-inner"  style="background-color: #FFF1EE;">
             <div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-12">
+                <div class="inner" style="white-space: nowrap;">
+                    <div class="col-lg-3 col-md-3 col-11" >
                             <!-- Start Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="../Assets/Templates/Main/img/logo.png" alt="#"></a>
+                                <a href="./Homepage.jsp"><img src="../Assets/Templates/Main/img/logomain.png" width="239px" height="58px" alt="#"></a>
                             </div>
                             <!-- End Logo -->
                             <!-- Mobile Nav -->
                             <div class="mobile-nav"></div>
                             <!-- End Mobile Nav -->
                         </div>
-                        <div class="col-lg-7 col-md-9 col-12">
+                        <div class="col-lg-7 col-md-7 col-12"  style="width: 800px; white-space: nowrap;">
                             <!-- Main Menu -->
-                            <div class="main-menu">
+                             <div class="main-menu"  style="width: 950px;">
                                 <nav class="navigation">
-                                    <ul class="nav menu">
+                                    <!--<br>-->
+                                    <ul class="nav menu" >
                                         <li><a href="./Homepage.jsp">Home</a></li>
                                         <li><a href="./MyProfile.jsp">My Profile </a></li>
                                         <li><a href="./ViewHospitals.jsp">View Hospitals</a></li>
@@ -129,14 +135,15 @@
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
-                            </div>
+                            <!--</div>-->
                             <!--/ End Main Menu -->
-                        </div>
-                        <div class="col-lg-2 col-12">
+<!--                        </div>
+                        <div class="col-lg-7 col-md-7 col-12">-->
                             <div class="get-quote">
                                 <a href="./MyAppointments.jsp" class="btn">My Appointment</a>
                             </div>
                         </div>
+                            
                     </div>
                 </div>
             </div>
