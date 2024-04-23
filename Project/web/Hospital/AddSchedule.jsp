@@ -21,8 +21,13 @@
             String selQry = "select * from tbl_slots";
             ResultSet rs = con.selectCommand(selQry);
             if (request.getParameter("btnsubmit") != null) {
-                String insQry = "insert into tbl_schedule(schedule_day,hospital_id,doctors_id)values('" + request.getParameter("selday") + "','" + session.getAttribute("hid") + "', '" + request.getParameter("seldoctor") + "') ";
-                con.executeCommand(insQry);
+                if (Integer.parseInt(request.getParameter("on")) == 0) {
+                    String insQry = "insert into tbl_schedule(schedule_day,hospital_id,doctors_id,schedule_online)values('" + request.getParameter("selday") + "','" + session.getAttribute("hid") + "', '" + request.getParameter("seldoctor") + "',0) ";
+                    con.executeCommand(insQry);
+                } else {
+                    String insQry = "insert into tbl_schedule(schedule_day,hospital_id,doctors_id,schedule_online)values('" + request.getParameter("selday") + "','" + session.getAttribute("hid") + "', '" + request.getParameter("seldoctor") + "',1) ";
+                    con.executeCommand(insQry);
+                }
                 String selSid = "select schedule_id from tbl_schedule where schedule_id = last_insert_id()";
                 ResultSet rs2 = con.selectCommand(selSid);
                 int flag = 0;
@@ -41,7 +46,7 @@
                         }
                     }
                 }
-                    if (flag == 0) {
+                if (flag == 0) {
 
         %>
         <script>
@@ -50,10 +55,10 @@
         </script>
         <%        } else {
         %>
-                <script>
-                    alert("Failed");
-                    window.location = "AddSchedule.jsp";
-                </script>
+        <script>
+            alert("Failed");
+            window.location = "AddSchedule.jsp";
+        </script>
         <%
                 }
             }
