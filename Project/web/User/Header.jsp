@@ -117,8 +117,7 @@
                                         <li><a href="./Homepage.jsp">Home</a></li>
                                         <li><a href="./MyProfile.jsp">My Profile </a></li>
                                         <li><a href="./ViewHospitals.jsp">View Hospitals</a></li>
-                                        <li><a href="#">Pages</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
