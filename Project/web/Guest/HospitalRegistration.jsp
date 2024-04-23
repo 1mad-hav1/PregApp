@@ -76,17 +76,17 @@
                             </div>
                             <div class="form-input">
 
-                                <span><i class="fa fa-photo"></i></span>
+                                <span style="padding-left: 7px; font-weight: bold;">LOGO</span>
                                 <input type="file" name="file_logo" required>
                             </div>
                             <div class="form-input">
 
-                                <span><i class="fa fa-photo"></i></span>
+                                <span style="padding-left: 7px; font-weight: bold;">PROOF</span>
                                 <input type="file" name="file_proof" required>
                             </div>
                             <div class="form-input">
 
-                                <span><i class="fa fa-photo"></i></span>
+                                <span style="padding-left: 7px; font-weight: bold;">PHOTO</span>
                                 <input type="file" name="file_photo" required>
                             </div>
                             <div class="text-left mb-3" align="center">

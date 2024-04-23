@@ -115,7 +115,11 @@
                     <div class="col-lg-3 col-md-3 col-11" >
                             <!-- Start Logo -->
                             <div class="logo">
+<<<<<<< HEAD
+                                <a href="index.html"><img src="../Assets/Templates/Main/img/logomain2.png" alt="#"></a>
+=======
                                 <a href="./Homepage.jsp"><img src="../Assets/Templates/Main/img/logomain.png" width="239px" height="58px" alt="#"></a>
+>>>>>>> d5ded2fe34bf015d4faaa3fd2fd37f758359d023
                             </div>
                             <!-- End Logo -->
                             <!-- Mobile Nav -->

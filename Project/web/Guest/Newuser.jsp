@@ -84,7 +84,7 @@
                             </div>
                             <div class="form-input">
 
-                                <span><i class="fa fa-photo"></i></span>
+                                <span style="padding-left: 7px; font-weight: bold;">PHOTO</span>
                                 <input type="file" name="file_photo" required>
                             </div>
                             <div class="text-left mb-3" align="center">

@@ -344,7 +344,7 @@ body{
 	bottom: 0;
 	height: 3px;
 	width:0%;
-	background: #1A76D1;
+	background: #Ffc0cb;
 	border-radius: 5px 5px 0 0;
 	opacity:0;
 	visibility:hidden;
@@ -366,7 +366,7 @@ body{
 	visibility:visible;
 }
 .header .nav li:hover a{
-	color:#1a76d1;
+	color:#Ffc0cb;
 }
 .header .nav li a i {
 	display: inline-block;
@@ -4153,7 +4153,7 @@ body{
 	color:#2C2D3F;
 }
 .footer .copyright{
-	background:#1A76D1;
+	background:#Ffc0cb;
 	padding:25px 0px 25px 0px;
 	text-align:center;
 }
