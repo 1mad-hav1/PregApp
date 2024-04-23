@@ -3,12 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
             <file>file:/D:/PregApp/Project/web/Guest/Login.jsp</file>
-            <file>file:/D:/PregApp/Project/web/Hospital/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/normalize.css</file>
             <file>file:/D:/PregApp/Project/web/Hospital/Header.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/Newuser.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
+            <file>file:/D:/PregApp/Project/web/User/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/User/Header.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Guest/HospitalRegistration.jsp</file>
             <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/bootstrap.min.css</file>
+            <file>file:/D:/PregApp/Project/web/User/Footer.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/img/logo.png</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Login/style.css</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/img/logomain.png</file>
             <file>file:/D:/PregApp/Project/web/Hospital/ServiceRegistration.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/style.css</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/Footer.jsp</file>
         </group>
     </open-files>
 </project-private>

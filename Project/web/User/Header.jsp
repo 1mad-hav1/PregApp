@@ -110,7 +110,7 @@
                         <div class="col-lg-3 col-md-3 col-12">
                             <!-- Start Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="../Assets/Templates/Main/img/logo.png" alt="#"></a>
+                                <a href="index.html"><img src="../Assets/Templates/Main/img/logomain2.png" alt="#"></a>
                             </div>
                             <!-- End Logo -->
                             <!-- Mobile Nav -->
