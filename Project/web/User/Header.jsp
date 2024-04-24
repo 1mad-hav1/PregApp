@@ -3,7 +3,6 @@
     Created on : 7 Apr, 2024, 11:22:53 AM
     Author     : PRITHVIRAJ
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -15,16 +14,12 @@
         <meta name="description" content="">
         <meta name='copyright' content=''>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Title -->
         <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
-
         <!-- Favicon -->
         <link rel="icon" href="../Assets/Templates/Main/img/favicon.png">
-
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../Assets/Templates/Main/css/bootstrap.min.css">
         <!-- Nice Select CSS -->
@@ -43,22 +38,15 @@
         <link rel="stylesheet" href="../Assets/Templates/Main/css/animate.min.css">
         <!-- Magnific Popup CSS -->
         <link rel="stylesheet" href="../Assets/Templates/Main/css/magnific-popup.css">
-
         <!-- Medipro CSS -->
         <link rel="stylesheet" href="../Assets/Templates/Main/css/normalize.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/style.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/css/responsive.css">
-        
          <style>
         .content-wrapper {
             background-color: pink;
             padding: 20px; /* Adjust padding as needed */
         }
-            body {
-                background-color: #FFF1EE;
-            }
-           
-        
     </style>
     </head>
     <body>      
@@ -77,78 +65,69 @@
                     </div>
                 </div>-->
         <!-- End Preloader -->
-
         <!-- Get Pro Button -->
-
         <!-- Header Area -->
-        <header class="header"  style="height: 150px ">
+        <header class="header" >
             <!-- Topbar -->
-            <div class="topbar"  style="background-color: #FFF1EE; ">
-            <div class="container">
-                <div class="row">
-                    <!--						<div class="col-lg-6 col-md-5 col-12">
-                                                                             Contact 
-                                                                            <ul class="top-link">
-                                                                                    <li><a href="#">About</a></li>
-                                                                                    <li><a href="./DoctorsList.jsp">Doctors</a></li>
-                                                                                    <li><a href="#">Contact</a></li>
-                                                                                    <li><a href="#">FAQ</a></li>
-                                                                            </ul>
-                                                                             End Contact 
-                                                                    </div>-->
-                    <div class="col-lg-6 col-md-7 col-12" >
-                        <!-- Top Contact -->
-                        <ul class="top-contact">
-                            <li><i class="fa fa-phone"></i>+91 1234567890</li>
-                            <li><i class="fa fa-envelope"></i><a href="mailto:babyglow2024@gmail.com">babyglow2024@gmail.com</a></li>
-                        </ul>
-                        <!-- End Top Contact -->
-                    </div>
-                </div>
-            </div>
-        </div>
+            <!--div class="topbar">
+                                            <div class="container">
+                                                    <div class="row">
+                                                            <div class="col-lg-6 col-md-5 col-12">
+                                                                     Contact 
+                                                                    <ul class="top-link">
+                                                                            <li><a href="#">About</a></li>
+                                                                            <li><a href="#">Doctors</a></li>
+                                                                            <li><a href="#">Contact</a></li>
+                                                                            <li><a href="#">FAQ</a></li>
+                                                                    </ul>
+            <!-- End Contact 
+    </div>
+    <div class="col-lg-6 col-md-7 col-12">
+             Top Contact 
+            <ul class="top-contact">
+                    <li><i class="fa fa-phone"></i>+880 1234 56789</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+            </ul>
+             End Top Contact 
+    </div>
+</div>
+</div>
+        </div>-->
         <!-- End Topbar -->
         <!-- Header Inner -->
-        <div class="header-inner"  style="background-color: #FFF1EE;">
+        <div class="header-inner">
             <div class="container">
-                <div class="inner" style="white-space: nowrap;">
-                    <div class="col-lg-3 col-md-3 col-11" >
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
                             <!-- Start Logo -->
                             <div class="logo">
-<<<<<<< HEAD
                                 <a href="index.html"><img src="../Assets/Templates/Main/img/logomain2.png" alt="#"></a>
-=======
-                                <a href="./Homepage.jsp"><img src="../Assets/Templates/Main/img/logomain.png" width="239px" height="58px" alt="#"></a>
->>>>>>> d5ded2fe34bf015d4faaa3fd2fd37f758359d023
                             </div>
                             <!-- End Logo -->
                             <!-- Mobile Nav -->
                             <div class="mobile-nav"></div>
                             <!-- End Mobile Nav -->
                         </div>
-                        <div class="col-lg-7 col-md-7 col-12"  style="width: 800px; white-space: nowrap;">
+                        <div class="col-lg-7 col-md-9 col-12">
                             <!-- Main Menu -->
-                             <div class="main-menu"  style="width: 950px;">
+                            <div class="main-menu">
                                 <nav class="navigation">
-                                    <!--<br>-->
-                                    <ul class="nav menu" >
+                                    <ul class="nav menu">
                                         <li><a href="./Homepage.jsp">Home</a></li>
                                         <li><a href="./MyProfile.jsp">My Profile </a></li>
                                         <li><a href="./ViewHospitals.jsp">View Hospitals</a></li>
-                                        <li><a href="#">Pages</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        
                                     </ul>
                                 </nav>
-                            <!--</div>-->
+                            </div>
                             <!--/ End Main Menu -->
-<!--                        </div>
-                        <div class="col-lg-7 col-md-7 col-12">-->
+                        </div>
+                        <div class="col-lg-2 col-12">
                             <div class="get-quote">
                                 <a href="./MyAppointments.jsp" class="btn">My Appointment</a>
-                                
                             </div>
                         </div>
-                            
                     </div>
                 </div>
             </div>

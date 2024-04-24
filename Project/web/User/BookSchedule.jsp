@@ -16,6 +16,12 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <!-- Bootstrap Datepicker CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+        <style>
+    /* Override Bootstrap Datepicker CSS */
+    .datepicker-dropdown {
+        z-index: 9999 !important;
+    }
+</style>
     </head>
     <body>
         <%--<%@include file="Header.jsp" %>--%>
@@ -40,7 +46,7 @@
             rs.beforeFirst();
             if (request.getParameter("btnsubmit") != null) {
 
-                String ins = "insert into tbl_appointments(user_id,hospital_id,scheduleslots_id,appointments_date,doctors_id) values('" + session.getAttribute("uid") + "','" + hid + "','" + request.getParameter("rdoappointment") + "','" + request.getParameter("txtdate") + "','" + did + "')";
+                String ins = "insert into tbl_appointments(user_id,hospital_id,scheduleslots_id,appointments_date,doctors_id,appointments_online) values('" + session.getAttribute("uid") + "','" + hid + "','" + request.getParameter("rdoappointment") + "','" + request.getParameter("txtdate") + "','" + did + "','"+request.getParameter("on")+"')";
                 boolean status = con.executeCommand(ins);
                 if (status) {
                     String upd = "update tbl_scheduleslots set scheduleslots_count=scheduleslots_count+1 where scheduleslots_id='" + request.getParameter("rdoappointment") + "'";
@@ -61,6 +67,8 @@
             <% }
                 }%>
         <form name="frmBookappointment" method="post">
+            <br>
+            <br>
             <table border="1">
                 <% if (rs3.next()) {
 

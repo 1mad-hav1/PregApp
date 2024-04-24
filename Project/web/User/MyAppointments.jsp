@@ -39,6 +39,7 @@
                     <th>Sl No.</th>
                     <th>Date</th>
                     <th>Time Slot</th>
+                    <th>Online/Offline</th>
                     <th>Doctor</th>
                     <th>Service</th>
                     <th>Hospital</th>
@@ -47,7 +48,7 @@
                             String selQry1 = "select distinct appointments_date from tbl_appointments where user_id='" + session.getAttribute("uid") + "'";
                             ResultSet rs1 = con.selectCommand(selQry1);
                             while (rs1.next()) {
-                                String selQry = "select a.appointments_cancel,a.appointments_id, a.appointments_date ,d.doctors_name, h.hospital_name, sl.slots_fromtime, sl.slots_totime, sr.services_name from tbl_appointments a, tbl_hospital h, tbl_doctors d, tbl_services sr, tbl_hospitalservices hs, tbl_scheduleslots ss, tbl_slots sl where a.user_id='" + session.getAttribute("uid") + "' and a.appointments_date='" + rs1.getString("appointments_date") + "' and a.doctors_id=d.doctors_id and a.hospital_id=h.hospital_id and d.hospitalservices_id=hs.hospitalservices_id and hs.service_id=sr.services_id and a.scheduleslots_id=ss.scheduleslots_id and ss.slots_id=sl.slots_id";
+                                String selQry = "select a.appointments_online,a.appointments_cancel,a.appointments_id, a.appointments_date ,d.doctors_name, h.hospital_name, sl.slots_fromtime, sl.slots_totime, sr.services_name from tbl_appointments a, tbl_hospital h, tbl_doctors d, tbl_services sr, tbl_hospitalservices hs, tbl_scheduleslots ss, tbl_slots sl where a.user_id='" + session.getAttribute("uid") + "' and a.appointments_date='" + rs1.getString("appointments_date") + "' and a.doctors_id=d.doctors_id and a.hospital_id=h.hospital_id and d.hospitalservices_id=hs.hospitalservices_id and hs.service_id=sr.services_id and a.scheduleslots_id=ss.scheduleslots_id and ss.slots_id=sl.slots_id";
                                 ResultSet rs = con.selectCommand(selQry);
                                 while (rs.next()) {
                                     if (rs.last()) {
@@ -64,6 +65,7 @@
                     <td rowspan="<%=rowCount%>"><%=rs1.getString("appointments_date")%></td>
                     <%  while (rs.next()) {%>
                     <td><%=rs.getString("slots_fromtime")%> to <%=rs.getString("slots_totime")%></td>
+                    <td><% if (rs.getInt("appointments_online") == 0) { %>Offline <% } else { %>Online<% }%></td>
                     <td><%=rs.getString("doctors_name")%></td>
                     <td><%=rs.getString("services_name")%></td>
                     <td><%=rs.getString("hospital_name")%></td>

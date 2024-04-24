@@ -7,7 +7,7 @@
 # Server OS:                    Win32
 # Target compatibility:         ANSI SQL
 # HeidiSQL version:             4.0
-# Date/time:                    11-04-2024 13:47:16
+# Date/time:                    2024-04-23 19:13:47
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ANSI,NO_BACKSLASH_ESCAPES';*/
@@ -62,7 +62,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_appointments" (
   "appointments_date" varchar(30) default NULL,
   "appointments_cancel" int(10) unsigned default NULL,
   PRIMARY KEY  ("appointments_id")
-) AUTO_INCREMENT=23;
+) AUTO_INCREMENT=22;
 
 
 
@@ -82,8 +82,6 @@ REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id
 	('20','12','46','8','8','2024-04-11',NULL);
 REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
 	('21','13','10','8','8','2024-04-14',NULL);
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
-	('22','14','46','8','8','2024-04-17','0');
 /*!40000 ALTER TABLE "tbl_appointments" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -427,6 +425,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_schedule" (
   "hospital_id" int(10) unsigned default NULL,
   "schedule_day" varchar(20) default NULL,
   "doctors_id" int(10) unsigned default NULL,
+  "schedule_online" int(10) unsigned default NULL,
   PRIMARY KEY  ("schedule_id")
 ) AUTO_INCREMENT=27;
 
@@ -438,20 +437,20 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_schedule" (
 
 LOCK TABLES "tbl_schedule" WRITE;
 /*!40000 ALTER TABLE "tbl_schedule" DISABLE KEYS;*/
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('18','8','Sunday','8');
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('19','7','Sunday','5');
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('20','7','Tuesday','5');
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('21','7','Sunday','9');
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('23','9','Tuesday','11');
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('25','9','Sunday','11');
-REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id") VALUES
-	('26','8','Wednesday','8');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('18','8','Sunday','8','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('19','7','Sunday','5','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('20','7','Tuesday','5','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('21','7','Sunday','9','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('23','9','Tuesday','11','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('25','9','Sunday','11','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('26','8','Wednesday','8','0');
 /*!40000 ALTER TABLE "tbl_schedule" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -686,7 +685,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_user" (
   "user_lmp" date default NULL,
   "user_dob" date default NULL,
   PRIMARY KEY  ("user_id")
-) AUTO_INCREMENT=15;
+) AUTO_INCREMENT=16;
 
 
 
@@ -713,6 +712,8 @@ REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "
 	('13','Sharon','123567890','sharonsunny8035@gmail.com','sharon123','2','woww','UserPhoto_1408.jpeg','2024-04-26','2024-04-16');
 REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
 	('14','madhav','1234567890','kmadhav1028@gmail.com','madhav123','2','adadada','UserPhoto_1233.jpg','2024-04-04','2024-04-04');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_contact", "user_email", "user_password", "place_id", "user_address", "user_photo", "user_lmp", "user_dob") VALUES
+	('15','madhav','123467890','madh@gmail.com','nirmala123','2','adadad','UserPhoto_1032.jpg','2024-04-07','2024-04-20');
 /*!40000 ALTER TABLE "tbl_user" ENABLE KEYS;*/
 UNLOCK TABLES;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE;*/

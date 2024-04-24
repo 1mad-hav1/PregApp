@@ -23,7 +23,7 @@
     
     // Send emails
     String[] emailArray = mailList.toArray(new String[0]); // Convert ArrayList to array
-    boolean emailSent = m.sendMail(emailArray, "Subject", "Text"); // Send email to multiple addresses at once
+    boolean emailSent = m.sendMail(emailArray, "Don't Forget: Your Pregnancy Reminder for Tomorrow!", "Dear Mom-to-be,\n\nQuick reminder from BabyGlow! You have an important event scheduled for tomorrow. Stay on track with your pregnancy journey.\n\nWarm regards,\nTeam BabyGlow"); // Send email to multiple addresses at once
     
     if (emailSent) {
         mailCount = emailArray.length;
