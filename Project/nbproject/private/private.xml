@@ -2,17 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
+            <file>file:/D:/PregApp/Project/web/Admin/Homepage.jsp</file>
             <file>file:/D:/PregApp/Project/web/Guest/Login.jsp</file>
             <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/normalize.css</file>
             <file>file:/D:/PregApp/Project/web/Hospital/Header.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/css/styles.min.css</file>
             <file>file:/D:/PregApp/Project/web/Guest/Newuser.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Admin/Header.jsp</file>
             <file>file:/D:/PregApp/Project/web/Admin/Hospitallist.jsp</file>
             <file>file:/D:/PregApp/Project/web/User/Homepage.jsp</file>
             <file>file:/D:/PregApp/Project/web/User/Header.jsp</file>
             <file>file:/D:/PregApp/Project/web/Hospital/Homepage.jsp</file>
             <file>file:/D:/PregApp/Project/web/Guest/HospitalRegistration.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/css/styles.css</file>
+            <file>file:/D:/PregApp/Project/web/User/BookSchedule.jsp</file>
             <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/css/bootstrap.min.css</file>
             <file>file:/D:/PregApp/Project/web/User/Footer.jsp</file>
             <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/img/logo.png</file>
@@ -21,9 +25,7 @@
             <file>file:/D:/PregApp/Project/web/Hospital/ServiceRegistration.jsp</file>
             <file>file:/D:/PregApp/Project/web/Assets/Templates/Main/style.css</file>
             <file>file:/D:/PregApp/Project/web/Hospital/Footer.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Assets/Templates/Admin/scss/styles.scss</file>
         </group>
-=======
-        <group/>
->>>>>>> d5ded2fe34bf015d4faaa3fd2fd37f758359d023
     </open-files>
 </project-private>
