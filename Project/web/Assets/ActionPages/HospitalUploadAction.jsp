@@ -61,7 +61,7 @@
                 file_name = f_item.getName();
                 field_name = f_item.getFieldName();
 
-                if (field_name.equals("filephoto"))//write the name of image here it is img_product
+                if (field_name.equals("file_photo"))//write the name of image here it is img_product
                 {
                     String ext = file_name.substring(file_name.lastIndexOf("."));//means the extension is stored to variable ext
                     //setting path to store image
@@ -81,7 +81,7 @@
                         out.println(ex);
                     }
                 }
-                if (field_name.equals("filelogo"))//write the name of image here it is img_product
+                if (field_name.equals("file_logo"))//write the name of image here it is img_product
                 {
                     String ext = file_name.substring(file_name.lastIndexOf("."));//means the extension is stored to variable ext
                     //setting path to store image
@@ -101,7 +101,7 @@
                         out.println(ex);
                     }
                 }
-                if (field_name.equals("fileproof"))//write the name of image here it is img_product
+                if (field_name.equals("file_proof"))//write the name of image here it is img_product
                 {
                     String ext = file_name.substring(file_name.lastIndexOf("."));//means the extension is stored to variable ext
                     //setting path to store image

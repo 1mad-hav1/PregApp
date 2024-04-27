@@ -10,13 +10,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>BabyGlow : User Registration</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="../Assets/Templates/Login/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <style>
+.form-box textarea {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+    padding-left: 45px;
+    padding-top: 5px;
+    resize: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-box textarea::placeholder {
+    padding-left: 0px;
+    padding-top: 3px;
+}
+
+.form-box textarea:focus,
+.form-box textarea:valid {
+    border-bottom: 2px solid #dc3545;
+}
+</style>
     </head>
     <body>
 
@@ -79,8 +105,8 @@
                                 </select>
                             </div>
                             <div class="form-input">
-                                <span style="padding-left: 7px; "><i class="fa fa-address-card"></i></span>
-                                <input type="text" name="txtaddress" placeholder="Address" required>
+                                <span style="padding-left: 15px; "><i class="fa fa-address-card"></i></span>
+                                <textarea name="txtaddress" placeholder="Address" rows="3" required></textarea>
                             </div>
                             <div class="form-input">
 

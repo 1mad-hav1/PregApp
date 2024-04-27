@@ -14,17 +14,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Profile</title>
+        <style>
+            input[type="submit"] { border: none; cursor: pointer; width: 150px; height: 40px; border-radius: 5px; background-color: #888; /* Change this to the desired background color */ color: #000; /* Change this to the desired text color */ font-weight: bold; transition: 0.5s; }  
+        </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btneditprofile") != null) {
                 response.sendRedirect("../Hospital/HospitalEditProfile.jsp");
-            }
-            else if (request.getParameter("btnchangepassword") != null) {
+            } else if (request.getParameter("btnchangepassword") != null) {
                 response.sendRedirect("../Hospital/HospitalChangePassword.jsp");
-            }
-            else if (request.getParameter("btnhome") != null) {
+            } else if (request.getParameter("btnhome") != null) {
                 response.sendRedirect("../Hospital/Homepage.jsp");
             }
             String selQry = "select * from tbl_hospital where hospital_id='" + session.getAttribute("hid") + "'";
@@ -32,7 +33,7 @@
             if (urs.next()) {
         %>
         <form name="frmUserprofile" method="post">
-            <table border="1" align="center" height="500" width="500">
+            <table align="center" height="500" width="500">
                 <tr>
                     <td colspan="2" align="center">
                         <img align="top" src="../Assets/Files/<%=urs.getString("hospital_logo")%>" width="120" height="120"/>
@@ -40,32 +41,32 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Name</td>
+                    <th>Name:</th>
                     <td><%=urs.getString("hospital_name")%></td>
                 </tr>
                 <tr>
-                    <td>
-                        Contact
-                    </td>
+                    <th>
+                        Contact:
+                    </th>
                     <td><%=urs.getString("hospital_contact")%></td>
                 </tr>
                 <tr>
-                    <td>
-                        Email
-                    </td>
+                    <th>
+                        Email:
+                    </th>
                     <td><%=urs.getString("hospital_email")%></td>
                 </tr>  
                 <tr>
-                    <td>
-                        Address
-                    </td>
+                    <th>
+                        Address:
+                    </th>
                     <td><%=urs.getString("hospital_address")%></td>
                 </tr>
                 <tr align="center">
                     <td colspan="2">
-                        <input type="submit" value="Edit Profile" name="btneditprofile">
-                        <input type="submit" value="Change Password" name="btnchangepassword">
-                        <input type="submit" value="Home" name="btnhome">
+                        <Button type="submit" name="btneditprofile" class="btn">Edit Profile</button>
+                        <Button type="submit" name="btnchangepassword" class="btn">Change Password</Button>
+                        <Button  type="submit" name="btnhome" class="btn">Home</Button>
                     </td>
                 </tr>
                 <% }%>

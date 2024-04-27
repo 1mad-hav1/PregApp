@@ -52,9 +52,32 @@
             body {
                 background-color: #FFF1EE;
             }
-           
+
+             
+
+            /* Define styles for the table cells */
+            th{
+                padding: 10px;
+                /*border: 1px solid black;*/
+                font-weight: bold;
+                text-align: right;
+                font-size: 15pt;
+            }
+            td {
+                padding: 10px;
+                /*border: 1px solid black;*/
+                text-align: center;
+                font-size: 15pt;
+            }
+            table {
+                /*background-color: #fff;  Change the background color here */
+                border-collapse: collapse; /* Optional: to collapse the borders between cells */
+                width: 100%; /* Optional: Set table width */
+            }
+
+
         </style>
-        
+
     </style>
 </head>
 <body>      

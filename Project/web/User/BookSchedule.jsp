@@ -13,20 +13,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Book Schedule</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Datepicker CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-        <style>
-    /* Override Bootstrap Datepicker CSS */
-    .datepicker-dropdown {
-        z-index: 9999 !important;
-    }
-</style>
+
     </head>
     <body>
-        <%--<%@include file="Header.jsp" %>--%>
+        <%@include file="Header.jsp" %>
         <%
-            String hid = "", did = "";
+            String hid = "", did = "", day = "";
             int rowCount = 0;
             String sid = request.getParameter("sid");
             String selQry3 = "select * from tbl_schedule s,tbl_doctors d where s.doctors_id=d.doctors_id and s.schedule_id='" + sid + "'";
@@ -46,7 +38,7 @@
             rs.beforeFirst();
             if (request.getParameter("btnsubmit") != null) {
 
-                String ins = "insert into tbl_appointments(user_id,hospital_id,scheduleslots_id,appointments_date,doctors_id,appointments_online) values('" + session.getAttribute("uid") + "','" + hid + "','" + request.getParameter("rdoappointment") + "','" + request.getParameter("txtdate") + "','" + did + "','"+request.getParameter("on")+"')";
+                String ins = "insert into tbl_appointments(user_id,hospital_id,scheduleslots_id,appointments_date,doctors_id,appointments_online) values('" + session.getAttribute("uid") + "','" + hid + "','" + request.getParameter("rdoappointment") + "','" + request.getParameter("txtdate") + "','" + did + "','" + request.getParameter("on") + "')";
                 boolean status = con.executeCommand(ins);
                 if (status) {
                     String upd = "update tbl_scheduleslots set scheduleslots_count=scheduleslots_count+1 where scheduleslots_id='" + request.getParameter("rdoappointment") + "'";
@@ -71,7 +63,7 @@
             <br>
             <table border="1">
                 <% if (rs3.next()) {
-
+                        day = rs3.getString("schedule_day");
                 %>
                 <tr>
                     <td>Day</td>
@@ -84,7 +76,7 @@
                 <% }%>
                 <tr>
                     <td>Select Date</td>
-                    <td><input type="text" name="txtdate" id="txtweek" class="form-control" required placeholder="<%=rs3.getString("schedule_day")%>"></td>
+                    <td ><input  type="date" id="txtdate" name="txtdate" class="form-control" required><span id="validationMessage" style="color: red;"></span></td>
                 </tr>
                 <tr>
                     <td     >Select Slot</td>
@@ -107,52 +99,48 @@
                     </td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" name="btnsubmit" value="Submit"></td>
+                    <td colspan="2"><input type="submit" id="submitButton" name="btnsubmit" value="Submit"></td>
                 </tr>
             </table>
         </form>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- Bootstrap Datepicker JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('#txtweek').datepicker({
-                    format: 'yyyy-mm-dd',
-                    autoclose: true,
-                    todayHighlight: true,
-                    beforeShowDay: function(date) {
-                        const placeholderValue = $('#txtweek').attr('placeholder');
-                        if (placeholderValue === 'Sunday') {
-                            // Enable only Mondays
-                            return date.getDay() === 0;
-                        } else if (placeholderValue === 'Monday') {
-                            // Enable only Mondays
-                            return date.getDay() === 1;
-                        } else if (placeholderValue === 'Tuesday') {
-                            // Enable only Mondays
-                            return date.getDay() === 2;
-                        } else if (placeholderValue === 'Wednesday') {
-                            // Enable only Mondays
-                            return date.getDay() === 3;
-                        } else if (placeholderValue === 'Thursday') {
-                            // Enable only Mondays
-                            return date.getDay() === 4;
-                        } else if (placeholderValue === 'Friday') {
-                            // Enable only Mondays
-                            return date.getDay() === 5;
-                        } else if (placeholderValue === 'Saturday') {
-                            // Enable only Mondays
-                            return date.getDay() === 6;
-                        } else {
-                            // Enable all days
-                            return true;
-                        }
-                    }
-                });
-            });
+            function identifyDay() {
+                // Get the value of the date input field
+                var inputDate = document.getElementById("txtdate").value;
+                // Create a Date object from the input date
+                var dateObj = new Date(inputDate);
+                // Get the day of the week as a number (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+                var dayOfWeek = dateObj.getDay();
+                // Array to store day names
+                var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                // Get a reference to the submit button
+                var submitButton = document.getElementById("submitButton");
+                // Get the day name corresponding to the day of the week
+                var dayName = days[dayOfWeek];
+                dayName = dayName.toLowerCase();
+                var day1 = "<%=day%>";
+                console.log(day1);
+                day1 = day1.toLowerCase();
+                if (day1 != dayName) {
+                    document.getElementById("validationMessage").textContent = "Please select " + day1;
+                    submitButton.disabled = true;
+                }
+                else {
+                    document.getElementById("validationMessage").textContent = "";
+                    submitButton.disabled = false;
+                }
+            }
+            document.getElementById("txtdate").addEventListener("change", identifyDay);
+            // Function to set the minimum date of the date input field to today's date
+            function setMinDate() {
+                var today = new Date().toISOString().split('T')[0];
+                document.getElementById("txtdate").setAttribute('min', today);
+            }
+
+            // Call the setMinDate function when the page loads
+            setMinDate();
+            
         </script>
     </body>
-    <%--<%@include file="Footer.jsp" %>--%>
+    <%@include file="Footer.jsp" %>
 </html>
