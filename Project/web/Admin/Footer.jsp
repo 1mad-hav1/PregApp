@@ -18,6 +18,7 @@
     <script>
                             function sendMail()
                             {
+                                console.log("sendMail function called");
                                 $.ajax({
                                     url: "../Assets/AjaxPages/AjaxMail.jsp",
                                     success: function(html) {
@@ -25,6 +26,7 @@
                                     }
                                 });
                             }
+                            
     </script>
 </body>
 

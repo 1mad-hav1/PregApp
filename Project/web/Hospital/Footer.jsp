@@ -15,7 +15,7 @@
         }
         .footer {
             position: absolute;
-            bottom: 0;
+            /*bottom: 0;*/
             width: 100%;
             height: 100px; /* Adjust height as needed */
             background-color: #f8f9fa; /* Example background color */
@@ -34,24 +34,23 @@ p {
     }
 </style>
 		<footer id="footer" class="footer ">
-			<!-- Footer Top -->
-                        <div class="footer-top" style="height: 0px ; width: 0px">
+			 <!--Footer Top--> 
+                        <div class="footer-top" style="height: 0px ; width: 0px ;">
 				
 			</div>
-			<!--/ End Footer Top -->
-			<!-- Copyright -->
+			
 			<div class="copyright">
                             <div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
-							<div class="copyright-content">
-                                                            <p style="color: black ; ">© Copyright 2018  |  All Rights Reserved by <p style="color: blue">babyglow.com</p></p>
+                                                    <div class="copyright-content" style="width: 100%">
+                                                            <p style="color: black ; ">© Copyright 2018  |  All Rights Reserved by <p style="color: blue">BabyGlow</p></p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!--/ End Copyright -->
+			<!--/ End Copyright--> 
 		</footer>
 		<!--/ End Footer Area -->
 			<!-- jquery Min JS -->
