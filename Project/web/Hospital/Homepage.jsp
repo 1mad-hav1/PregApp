@@ -44,5 +44,5 @@
             }
         %>
     </body>
-    <%--<%@include file="Footer.jsp" %>--%>
+    <%@include file="Footer.jsp" %>
 </html>

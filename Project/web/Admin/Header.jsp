@@ -11,9 +11,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modernize Free</title>
+  <title>Baby Glow</title>
   <link rel="shortcut icon" type="image/png" href="../Assets/Templates/Admin/images/logos/favicon.png" />
   <link rel="stylesheet" href="../Assets/Templates/Admin/css/styles.min.css" />
+  <style>
+    /* Custom CSS for sidebar hover color, rounded border, and text color */
+    .scroll-sidebar #sidebarnav .sidebar-item:hover .sidebar-link {
+      background-color: #f8e3e7 !important;
+      border-radius: 10px; /* Adjust the border-radius as needed */
+      color: #FFC0CB !important; /* Text color on hover */
+    }
+     .nav-item:hover .nav-link {
+      /* Your hover styles for nav-item */
+      background-color: white;
+      border-radius: 5px; /* Adjust the border-radius as needed */
+      color: #f8e3e7;
+    }
+        .nav-item.active .nav-link {
+      /* Your styles for the active nav-item background */
+      background-color: pink !important;
+      color: white !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -120,6 +139,12 @@
             <li class="nav-item">
               <a class="nav-link nav-icon-hover" href="javascript:void(0)">
                 <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-send"></i>
                 <div class="notification bg-primary rounded-circle"></div>
               </a>
             </li>
