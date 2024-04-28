@@ -1,8 +1,29 @@
-<%-- 
-    Document   : Footer
-    Created on : 7 Apr, 2024, 11:24:03 AM
-    Author     : PRITHVIRAJ
---%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Page Title</title>
+    <!-- Include your CSS files here -->
+    <style>
+        /* Sticky Footer CSS */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin: 0;
+            padding-bottom: 100px; /* Adjust as needed based on footer height */
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px; /* Adjust height as needed */
+            background-color: #f8f9fa; /* Example background color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML code here -->
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- Footer Area -->

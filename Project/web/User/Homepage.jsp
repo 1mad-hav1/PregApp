@@ -23,9 +23,6 @@
         %>
         <form name="frmUserhome" method="post"> 
             <h1>Hello <%=session.getAttribute("uname")%></h1>
-            <a href="MyProfile.jsp">Profile</a>
-            <a href="ViewHospitals.jsp">Hospitals</a>
-            <a href="Chat/Chat.jsp">Chat</a>
         </form>
     </body>
      <%@include file="Footer.jsp" %>
