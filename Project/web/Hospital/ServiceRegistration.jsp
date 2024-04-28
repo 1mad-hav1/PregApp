@@ -13,6 +13,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Service Registration</title>
+        <style>
+            /* Define style for container */
+            .checkbox-container {
+                display: inline-block;
+                margin-right: 20px; /* Adjust spacing between checkboxes */
+            }
+            td {
+                padding: 5px;
+            }
+        </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -21,51 +31,64 @@
             ResultSet rs = con.selectCommand(selQry);
             if (request.getParameter("btnsubmit") != null) {
                 int flag = 0;
-                ResultSet rs1 = con.selectCommand(selQry);
-                while (rs1.next()) {
-                    if (request.getParameter(rs1.getString("services_name")) != null) {
-                        //String serviceid = request.getParameter(rs1.getString("services_name"));
-                        int flag1=0;
-                        String serviceid = rs1.getString("services_id");
-                        String selQry2 = "select * from tbl_hospitalservices where hospital_id='" + session.getAttribute("hid") + "' and service_id='" + serviceid + "'";
-                        ResultSet rs2 = con.selectCommand(selQry2);
-                        if(rs2.next())
-                            flag1=1;
-                        if(flag1==0){
-                        String insQry = "insert into tbl_hospitalservices(hospital_id,service_id)values('" + session.getAttribute("hid") + "', '" + serviceid + "') ";
-                        boolean status = con.executeCommand(insQry);
-                        if (status == false) {
-                            out.print(insQry);
-                            flag = 1;
-                            break;
+                String delQry = "delete from tbl_hospitalservices where hospital_id='" + session.getAttribute("hid") + "'";
+                boolean flag1 = con.executeCommand(delQry);
+                if (flag1) {
+                    ResultSet rs1 = con.selectCommand(selQry);
+                    while (rs1.next()) {
+                        if (request.getParameter(rs1.getString("services_name")) != null) {
+                            String serviceid = rs1.getString("services_id");
+                            String insQry = "insert into tbl_hospitalservices(hospital_id,service_id)values('" + session.getAttribute("hid") + "', '" + serviceid + "') ";
+                            boolean status = con.executeCommand(insQry);
+                            if (status == false) {
+                                out.print(insQry);
+                                flag = 1;
+                                break;
+                            }
                         }
                     }
-                }
-                if (flag == 0) {
+                    if (flag == 0) {
         %>
         <script>
             alert("Services Registered Successfully");
             window.location = "ServiceList.jsp";
         </script>
         <%
-                } }
-            }
+                        }
+                    }else { out.print(delQry); }
+                }
+            
+            int i = 0;
         %>
         <form method="post" name="frmServiceregistration">
-            <table>
+            <table border="1" align="center">
                 <tr>
-                    <th>Enter Service</th>
+                    <th colspan="3">Enter Services</th>
                 </tr>
-                <%while (rs.next()) {%>
                 <tr>
-                    <td>
-                        <input type="checkbox" value="<%=rs.getString("services_id")%>" name="<%=rs.getString("services_name")%>"><%=rs.getString("services_name")%>
+                    <%while (rs.next () 
+                            ) {
+
+                    %>
+                    <td style="text-align: center; width: 33%">
+
+                        <input type="checkbox" value="<%=rs.getString("services_id")%>" name="<%=rs.getString("services_name")%>"> <%=rs.getString("services_name")%>
+                        <% i++;
+                            if (i != 3) {
+                        %>
+                        </div
                     </td>
+                    <%
+                    } else {
+                        i = 0;
+                    %>
+                    </td></tr><tr>
+                    <% }
+                        }%>
                 </tr>
-                <% }%>
                 <tr>
-                    <td colspan="2" align="center">
-                        <input type="submit" name="btnsubmit" value="Submit">
+                    <td colspan="3" align="center">
+                        <Button type="submit" name="btnsubmit" class="btn">Submit</button>
                     </td>
                 </tr>
 

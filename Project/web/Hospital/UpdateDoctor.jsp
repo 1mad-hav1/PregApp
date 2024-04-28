@@ -13,6 +13,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Update Doctor</title>
+        <style>
+            /* Define style for input type text */
+            input {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+            
+        </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -41,7 +50,7 @@
             if (urs.next()) {
         %>
         <form name="frmDoctorupdate" method="post">
-            <table>
+            <table border="1" align="center">
                 <tr>
                     <th colspan="2" align="center"> Doctor Details Update</th>
                 </tr>
@@ -71,16 +80,21 @@
                                 String sel = "select * from tbl_hospitalservices u inner join tbl_services s on u.service_id=s.services_id where u.hospital_id='" + session.getAttribute("hid") + "'";
                                 ResultSet rs = con.selectCommand(sel);
                                 while (rs.next()) {
+                                    if(rs.getInt("hospitalservices_id")==urs.getInt("hospitalservices_id")){
                             %>
+                            <option value="<%=rs.getString("hospitalservices_id")%>" selected=""><%=rs.getString("services_name")%></option>
+                            <% } else { %>
                             <option value="<%=rs.getString("hospitalservices_id")%>"><%=rs.getString("services_name")%></option>
-                            <% } %>
+                            <% } } %>
                         </select>                       
                     </td>
                 </tr>
                 <% }%>
                 <tr>
-                    <td><input type="submit" value="Submit" name="btnsubmit"></td>
-                    <td><input type="reset" value="Reset" name="btnreset"></td>
+                    <td colspan="2">
+                        <Button type="submit" name="btnsubmit" class="btn">Submit</button>
+                        <Button type="reset" name="btnreset" class="btn">Reset</button>
+                    </td>
                 </tr>
 
             </table>

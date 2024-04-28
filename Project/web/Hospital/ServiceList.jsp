@@ -47,11 +47,11 @@
                 <tr align="center">
                     <td><%=i%></td>
                     <td><%=rs.getString("services_name")%></td>
-                    <td ><a href="ServiceList.jsp?del=<%=rs.getString("hospitalservices_id")%>">Delete</a></td>
+                    <td ><a style=" color: #DE0592 ;  text-decoration: underline" href="ServiceList.jsp?del=<%=rs.getString("hospitalservices_id")%>">Delete</a></td>
                 </tr>
                 <%}%>
                 <tr align="center">
-                    <td colspan="3"><input type="submit" value="Add Services" name="btnaddservice"></td>
+                    <td colspan="3"><Button type="submit" name="btnaddservice" class="btn">Add Services</button></td>
                 </tr>
             </table>
         </form>

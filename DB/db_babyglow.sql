@@ -7,7 +7,7 @@
 # Server OS:                    Win32
 # Target compatibility:         ANSI SQL
 # HeidiSQL version:             4.0
-# Date/time:                    2024-04-23 19:13:47
+# Date/time:                    2024-04-27 22:00:59
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ANSI,NO_BACKSLASH_ESCAPES';*/
@@ -61,8 +61,9 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_appointments" (
   "doctors_id" int(10) unsigned default NULL,
   "appointments_date" varchar(30) default NULL,
   "appointments_cancel" int(10) unsigned default NULL,
+  "appointments_online" int(10) unsigned default NULL,
   PRIMARY KEY  ("appointments_id")
-) AUTO_INCREMENT=22;
+) AUTO_INCREMENT=26;
 
 
 
@@ -72,16 +73,24 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_appointments" (
 
 LOCK TABLES "tbl_appointments" WRITE;
 /*!40000 ALTER TABLE "tbl_appointments" DISABLE KEYS;*/
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
-	('17','10','9','8','8','2024-04-14',NULL);
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
-	('18','10','45','8','8','2024-04-11',NULL);
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
-	('19','11','46','8','8','2024-04-11',NULL);
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
-	('20','12','46','8','8','2024-04-11',NULL);
-REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel") VALUES
-	('21','13','10','8','8','2024-04-14',NULL);
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('17','10','9','8','8','2024-04-14',NULL,'0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('18','10','45','8','8','2024-04-11','1','0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('19','11','46','8','8','2024-04-11',NULL,'0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('20','12','46','8','8','2024-04-11',NULL,'0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('21','13','10','8','8','2024-04-14',NULL,'0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('22','10','45','8','8','2024-04-24','1','0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('23','10','12','8','8','2024-04-28','2','1');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('24','8','46','8','8','2024-04-16',NULL,'0');
+REPLACE INTO "tbl_appointments" ("appointments_id", "user_id", "scheduleslots_id", "hospital_id", "doctors_id", "appointments_date", "appointments_cancel", "appointments_online") VALUES
+	('25','8','46','8','8','2024-05-01',NULL,'0');
 /*!40000 ALTER TABLE "tbl_appointments" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -427,7 +436,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_schedule" (
   "doctors_id" int(10) unsigned default NULL,
   "schedule_online" int(10) unsigned default NULL,
   PRIMARY KEY  ("schedule_id")
-) AUTO_INCREMENT=27;
+) AUTO_INCREMENT=29;
 
 
 
@@ -438,19 +447,23 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_schedule" (
 LOCK TABLES "tbl_schedule" WRITE;
 /*!40000 ALTER TABLE "tbl_schedule" DISABLE KEYS;*/
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
-	('18','8','Sunday','8','0');
+	('18','8','Sunday','8','1');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
 	('19','7','Sunday','5','0');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
 	('20','7','Tuesday','5','0');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
-	('21','7','Sunday','9','0');
+	('21','7','Sunday','9','1');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
 	('23','9','Tuesday','11','0');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
 	('25','9','Sunday','11','0');
 REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
 	('26','8','Wednesday','8','0');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('27','8','Sunday','8','1');
+REPLACE INTO "tbl_schedule" ("schedule_id", "hospital_id", "schedule_day", "doctors_id", "schedule_online") VALUES
+	('28','8','Sunday','8','1');
 /*!40000 ALTER TABLE "tbl_schedule" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -466,7 +479,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_scheduleslots" (
   "slots_id" int(10) unsigned default NULL,
   "schedule_id" int(10) unsigned default NULL,
   PRIMARY KEY  ("scheduleslots_id")
-) AUTO_INCREMENT=48;
+) AUTO_INCREMENT=56;
 
 
 
@@ -483,7 +496,7 @@ REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "sche
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('11','1111','0','8','18');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('12','1111','0','11','18');
+	('12','1111','1','11','18');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('19','22','0','2','20');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
@@ -513,11 +526,17 @@ REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "sche
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('44','3','0','9','25');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('45','20','1','10','26');
+	('45','20','0','10','26');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
-	('46','20','3','11','26');
+	('46','20','5','11','26');
 REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
 	('47','20','0','12','26');
+REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
+	('48','11','0','1','27');
+REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
+	('49','11','0','2','27');
+REPLACE INTO "tbl_scheduleslots" ("scheduleslots_id", "scheduleslots_max", "scheduleslots_count", "slots_id", "schedule_id") VALUES
+	('55','22','0','4','28');
 /*!40000 ALTER TABLE "tbl_scheduleslots" ENABLE KEYS;*/
 UNLOCK TABLES;
 

@@ -13,6 +13,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Update Schedule</title>
+        <style>
+            th{
+                width:30%;
+            }
+            input[type="number"] {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+
+        </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -64,15 +75,15 @@
         <form name="frmAddschedule" method="post">
             <table border="1">
                 <tr>
-                    <td>Select Day</td>
+                    <th>Select Day</th>
                     <td><%=rs3.getString("schedule_day")%></td>
                 </tr>
                 <tr>
-                    <td>Select Doctor</td>
+                    <th>Select Doctor</th>
                     <td><%=rs3.getString("doctors_name")%></td>
                 </tr>
                 <tr>
-                    <td rowspan="24">Available Slots</td>
+                    <th rowspan="24">Available Slots</th>
                     <%while (rs.next()) {%>
                     <td>
                         <input type="checkbox" value="<%=rs.getString("slots_id")%>" name="<%=rs.getString("slots_id")%>"><%=rs.getString("slots_fromtime")%> to <%=rs.getString("slots_totime")%>
@@ -82,12 +93,13 @@
                 %>
 
                 <tr>
-                    <td>Maximum no. of Bookings Allowed for a Slot</td>
+                    <th>Maximum no. of Bookings Allowed for a Slot</th>
                     <td><input type="number" name="txtmax" value="<%=rs3.getString("scheduleslots_max")%>" required=""></td>
                 </tr>
                 <% }%>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" value="Submit" name="btnsubmit"><input type="reset" value="Reset" name="btnreset"></td>
+                    <td colspan="2"><Button type="submit" name="btnsubmit" class="btn">Submit</button>
+                        <Button type="reset" name="btnreset" class="btn">Reset</button></td>
                 </tr>
             </table>
         </form>

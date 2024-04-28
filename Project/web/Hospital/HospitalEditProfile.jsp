@@ -13,6 +13,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Hospital Edit Profile</title>
+        <style>
+            /* Define style for input type text */
+            input {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+        </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -21,18 +29,20 @@
                 String name = request.getParameter("txtname");
                 String contact = request.getParameter("txtcontact");
                 String address = request.getParameter("txtaddress");
-                String upQry= " update tbl_hospital set hospital_name='"+name+"',hospital_email='"+email+"',hospital_contact='"+contact+"',hospital_address='"+address+"' where hospital_id='"+session.getAttribute("uid")+"'";
+                String upQry = " update tbl_hospital set hospital_name='" + name + "',hospital_email='" + email + "',hospital_contact='" + contact + "',hospital_address='" + address + "' where hospital_id='" + session.getAttribute("hid") + "'";
                 boolean status = con.executeCommand(upQry);
-            if (status == true) { %>
+                out.print(upQry);
+                if (status == true) { %>
         <script>
+           
             alert('Details Updated');
             window.location = "HospitalProfile.jsp";
         </script>
         <%
-              
+
+                }
             }
-        }
-            String selQry = "select * from tbl_hospital where hospital_id='"+session.getAttribute("hid")+"'";
+            String selQry = "select * from tbl_hospital where hospital_id='" + session.getAttribute("hid") + "'";
             ResultSet urs = con.selectCommand(selQry);
             if (urs.next()) {
         %>
@@ -64,7 +74,9 @@
                     <td><textarea name="txtaddress" rows="3"><%=urs.getString("hospital_address")%></textarea></td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" value="Submit" name="btnsubmit" ></td>
+                    <td colspan="2">
+                        <Button type="submit" name="btnsubmit" class="btn">Submit</button>
+                    </td>
                 </tr>
             </table>
             <% }%>

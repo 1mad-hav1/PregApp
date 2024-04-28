@@ -48,7 +48,10 @@
         <link rel="stylesheet" href="../Assets/Templates/Main/css/normalize.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/style.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/css/responsive.css">
+        
         <style>
+            
+            
             body {
                 background-color: #FFF1EE;
             }
@@ -60,7 +63,7 @@
                 padding: 10px;
                 /*border: 1px solid black;*/
                 font-weight: bold;
-                text-align: right;
+                 text-align: center;
                 font-size: 15pt;
             }
             td {

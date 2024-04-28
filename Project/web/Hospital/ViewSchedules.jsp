@@ -88,15 +88,15 @@
                         <br>
                         <% }%>
                     </td>
-                    <td><a href="UpdateSchedule.jsp?up=<%=rs1.getString("schedule_id")%>">Update Time Slots</a></td>
-                    <td><a href="ViewSchedules.jsp?del=<%=rs1.getString("schedule_id")%>">Delete</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline"  href="UpdateSchedule.jsp?up=<%=rs1.getString("schedule_id")%>">Update Time Slots</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline"  href="ViewSchedules.jsp?del=<%=rs1.getString("schedule_id")%>">Delete</a></td>
                 </tr>
                 <tr align="center">
                     <% }
                         }%>
                 </tr>
                 <tr align="center">
-                    <td colspan="8"><input type="submit" value="Add Schedule" name="btnadd">
+                    <td colspan="8"><Button type="submit" name="btnadd" class="btn">Add Offline Schedule</button>
                 </tr>
 
             </table>
@@ -159,15 +159,15 @@
                         <br>
                         <% }%>
                     </td>
-                    <td><a href="UpdateSchedule.jsp?up=<%=rso1.getString("schedule_id")%>">Update Time Slots</a></td>
-                    <td><a href="ViewSchedules.jsp?del=<%=rso1.getString("schedule_id")%>">Delete</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline"  href="UpdateSchedule.jsp?up=<%=rso1.getString("schedule_id")%>">Update Time Slots</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline"  href="ViewSchedules.jsp?del=<%=rso1.getString("schedule_id")%>">Delete</a></td>
                 </tr>
                 <tr align="center">
                     <% }
                         }%>
                 </tr>
                 <tr align="center">
-                    <td colspan="8"><input type="submit" value="Add Schedule" name="btnaddon">
+                    <td colspan="8"><Button type="submit" name="btnaddon" class="btn">Add Online Schedule</button>
                 </tr>
             </table>
         </form>

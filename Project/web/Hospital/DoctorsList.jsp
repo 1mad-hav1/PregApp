@@ -57,12 +57,12 @@
                     <td><%=rs.getString("doctors_qualification")%></td>
                     <td><%=rs.getString("services_name")%></td>
                     <td><img src="../Assets/Files/<%=rs.getString("doctors_photo")%>" width="120" height="120"/></td>
-                    <td><a href="DoctorsList.jsp?del=<%=rs.getString("doctors_id")%>">Delete</a></td>
-                    <td><a href="DoctorsList.jsp?up=<%=rs.getString("doctors_id")%>">Update</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline" href="DoctorsList.jsp?del=<%=rs.getString("doctors_id")%>">Delete</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline" href="DoctorsList.jsp?up=<%=rs.getString("doctors_id")%>">Update</a></td>
                 </tr>
                 <%}%>
                 <tr align="center">
-                    <td colspan="9"><input type="submit" value="Add Doctor" name="btnadddoctor"></td>
+                    <td colspan="9"><Button type="submit" name="btnadddoctor" class="btn">Add Doctor</button></td>
                 </tr>
             </table>
         </form>

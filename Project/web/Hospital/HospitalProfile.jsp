@@ -15,7 +15,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Profile</title>
         <style>
-            input[type="submit"] { border: none; cursor: pointer; width: 150px; height: 40px; border-radius: 5px; background-color: #888; /* Change this to the desired background color */ color: #000; /* Change this to the desired text color */ font-weight: bold; transition: 0.5s; }  
+           
+            .no-border {
+                border-right: 0;
+            }
         </style>
     </head>
     <body>
@@ -33,11 +36,18 @@
             if (urs.next()) {
         %>
         <form name="frmUserprofile" method="post">
-            <table align="center" height="500" width="500">
+            <table border="1" align="center" height="500" width="500">
                 <tr>
-                    <td colspan="2" align="center">
-                        <img align="top" src="../Assets/Files/<%=urs.getString("hospital_logo")%>" width="120" height="120"/>
-                        <img src="../Assets/Files/<%=urs.getString("hospital_photo")%>" width="200" height="200"/>
+                    <td colspan="2" style="font-weight: bold; font-size: 18pt">Hospital Profile</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img align="top" src="../Assets/Files/<%=urs.getString("hospital_logo")%>" width="120" height="120"/><br><br>
+                        Hospital Logo
+                    </td>
+                    <td class="no-border">
+                        <img src="../Assets/Files/<%=urs.getString("hospital_photo")%>" style="width: 500px; height: auto;"/><br><br>
+                        Hospital Photo
                     </td>
                 </tr>
                 <tr>

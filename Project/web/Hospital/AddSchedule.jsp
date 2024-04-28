@@ -13,6 +13,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Add Schedule</title>
+        <style>
+            th{
+                width:30%;
+            }
+            input[type="number"] {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+            
+        </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -66,9 +77,9 @@
         %>
 
         <form name="frmAddschedule" method="post">
-            <table border="1">
+            <table border="1" align="center">
                 <tr>
-                    <td>Select Day</td>
+                    <th>Select Day</th>
                     <td><select name="selday">
                             <option value="Sunday">Sunday</option>
                             <option value="Monday">Monday</option>
@@ -80,7 +91,7 @@
                         </select> </td>
                 </tr>
                 <tr>
-                    <td>Select Doctor</td>
+                    <th>Select Doctor</th>
                     <td><select name="seldoctor">
                             <%                                String selSubcat = "select * from tbl_doctors d, tbl_hospitalservices h where h.hospital_id='" + session.getAttribute("hid") + "' and d.hospitalservices_id=h.hospitalservices_id";
                                 ResultSet rsSubcat = con.selectCommand(selSubcat);
@@ -92,19 +103,20 @@
                         </select></td>
                 </tr>
                 <tr>
-                    <td rowspan="24">Available Slots</td>
-                    <%while (rs.next()) {%>
+                    <th rowspan="24">Available Slots</th>
+                        <%while (rs.next()) {%>
                     <td>
                         <input type="checkbox" value="<%=rs.getString("slots_id")%>" name="<%=rs.getString("slots_id")%>"><%=rs.getString("slots_fromtime")%> to <%=rs.getString("slots_totime")%>
                     </td>
                 </tr>
                 <% }%>
                 <tr>
-                    <td>Maximum no. of Bookings Allowed for a Slot</td>
+                    <th>Maximum no. of Bookings Allowed for a Slot</th>
                     <td><input type="number" name="txtmax" required=""></td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" value="Submit" name="btnsubmit"><input type="reset" value="Reset" name="btnreset"></td>
+                    <td colspan="2"><Button type="submit" name="btnsubmit" class="btn">Submit</button>
+                        <Button type="reset" name="btnreset" class="btn">Reset</button></td>
                 </tr>
             </table>
         </form>

@@ -14,6 +14,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Hospital Change Password</title>
+        
+        <style>
+            /* Define style for input type text */
+            input {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+        </style>
     </head>
     <%
         if (request.getParameter("btnsubmit") != null) {
@@ -84,7 +93,7 @@
                     <td><input type="text" name="txtrepass"></td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" value="Submit" name="btnsubmit"></td>
+                    <td colspan="2"><Button type="submit" name="btnsubmit" class="btn">Submit</button></td>
                 </tr>
             </table>
         </form>
