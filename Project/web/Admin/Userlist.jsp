@@ -13,6 +13,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : User List</title>
+    <style>
+        /* CSS for table borders */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merge borders for adjacent cells */
+        }
+        th, td {
+            border-bottom: 1px solid #000; /* Border at the bottom of cells */
+            padding: 8px; /* Add padding for better spacing */
+        }
+        td:not(:last-child) {
+            border-right: 1px solid #000; /* Border on the right side of cells, except for the last cell in each row */
+        }
+        th {
+            background-color: #f2f2f2; /* Gray background for header cells */
+        }
+    </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -25,7 +42,7 @@
 
         %>
         <form name="frmUserlist" method="post">
-            <table  align="center" width="1300px" border="1">
+            <table style="width: 100%; font-size: 18px; border: 1px solid #000;">
                 <tr>
                     <th colspan="9" align="center">Userlist</th>
                 </tr>

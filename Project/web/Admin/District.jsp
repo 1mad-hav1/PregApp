@@ -14,6 +14,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow::District</title>
+<style>
+        /* CSS for table borders */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merge borders for adjacent cells */
+        }
+        th, td {
+            border-bottom: 1px solid #000; /* Border at the bottom of cells */
+            padding: 8px; /* Add padding for better spacing */
+        }
+        td:not(:last-child) {
+            border-right: 1px solid #000; /* Border on the right side of cells, except for the last cell in each row */
+        }
+        th {
+            background-color: #f2f2f2; /* Gray background for header cells */
+        }
+    </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -52,17 +69,17 @@
         %>
 
 
-        <form method="post" name="frmdistrict">
-            <table>
-                <tr>
-                    <td>DistrictName</td>
-                    <td><input type="text" name="txtdistrict" placeholder="Enter District" required=""></td>
+       <form method="post" name="frmdistrict">
+            <table style="width: 100%; font-size: 24px;">
+                <tr align="center">
+                     <td>DistrictName</td>
+                     <td><input type="text" name="txtdistrict" placeholder="Enter District" required=""></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center">
-                        <input type="submit" name="btnsubmit" value="Save">
-                        <input type="reset" name="btncancel" value="Cancel">
-                    </td>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="btnsubmit" value="Save" style="background-color: pink; border-radius: 10px; border: 1px solid pink;">
+                            <input type="reset" name="btncancel" value="Cancel" style="background-color: pink; border-radius: 10px; border: 1px solid pink;">
+                        </td>
                 </tr>
             </table>
         </form>
@@ -70,10 +87,8 @@
 </html>
 
 
-<table border="1" align="center">
-
-
-    <tr >
+<table style="width: 100%; font-size: 24px; ">
+    <tr>
         <th >Sl.No</th>
         <th >Name</th>
         <th >Action</th>
