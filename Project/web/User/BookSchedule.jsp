@@ -99,7 +99,7 @@
                     </td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" id="submitButton" name="btnsubmit" value="Submit"></td>
+                    <td colspan="2"><Button type="submit" name="btnsubmit" class="btn">Submit</button></td>
                 </tr>
             </table>
         </form>

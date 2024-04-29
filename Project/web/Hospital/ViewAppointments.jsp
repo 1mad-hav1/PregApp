@@ -82,7 +82,7 @@
                     <% if (rs.getString("appointments_cancel") == null) { %>
                     <td align="center">-</td>
                     <% } else if (rs.getInt("appointments_cancel") == 0) {%>
-                    <td align="center">Cancellation Requested <a href="ViewAppointments.jsp?acc=<%=rs.getString("appointments_id")%>&ss=<%=rs.getString("scheduleslots_id")%>">Accept</a> <a href="ViewAppointments.jsp?rej=<%=rs.getString("appointments_id")%>">Reject</a>
+                    <td align="center">Cancellation Requested <a style=" color: #DE0592 ;  text-decoration: underline"  href="ViewAppointments.jsp?acc=<%=rs.getString("appointments_id")%>&ss=<%=rs.getString("scheduleslots_id")%>">Accept</a> <a style=" color: #DE0592 ;  text-decoration: underline"  href="ViewAppointments.jsp?rej=<%=rs.getString("appointments_id")%>">Reject</a>
                     </td>
                     <% } else if (rs.getInt("appointments_cancel") == 1) {%>
                     <td>Cancellation Accepted</td>

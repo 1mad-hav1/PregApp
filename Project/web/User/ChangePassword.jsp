@@ -13,6 +13,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Change Password</title>
+        <style>
+            /* Define style for input type text */
+            input {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+        </style>
     </head>
     <%
         if (request.getParameter("btnsubmit") != null) {
@@ -23,7 +31,7 @@
             String cp = request.getParameter("txtcurr");
             String np = request.getParameter("txtnew");
             String rp = request.getParameter("txtrepass");
-            
+
             if (dp.equals(cp)) {
                 if (np.equals(rp)) {
                     String upQry = "update tbl_user set user_password='" + np + "' where user_id='" + session.getAttribute("uid") + "'";
@@ -33,34 +41,32 @@
         alert('Password Updated');
         window.location = "Homepage.jsp";
     </script>
-    <%                    
-                    }
-                    else
-                    {
-                        
-                    }
-                } else {
-                     %>
+    <%
+        } else {
+
+        }
+    } else {
+    %>
     <script>
         alert('New Password Missmatched');
         window.location = "ChangePassword.jsp";
     </script>
-    <% 
-                }
-            } else {
-                %>
+    <%
+        }
+    } else {
+    %>
     <script>
         alert('Current Password Missmatched');
         window.location = "ChangePassword.jsp";
     </script>
-    <% 
+    <%
             }
-            
+
         }
 
     %>
     <body>
-         <%@include file="Header.jsp" %>
+        <%@include file="Header.jsp" %>
         <form name="frmEditUserprofile">
             <table border="1" align="center" height="300px" width="300px">
                 <tr align="center">
@@ -83,11 +89,11 @@
                     <td><input type="text" name="txtrepass"></td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><input type="submit" value="Submit" name="btnsubmit"></td>
+                    <td colspan="2"><Button type="submit" name="btnsubmit" class="btn">Submit</button></td>
                 </tr>
             </table>
         </form>
     </body>
-     <%@include file="Footer.jsp" %>
+    <%@include file="Footer.jsp" %>
 </html>
 

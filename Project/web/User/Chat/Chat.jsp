@@ -1,7 +1,7 @@
-     -<%-- 
-    Document   : Chat
-    Created on : May 8, 2021, 4:07:26 PM
-    Author     : Pro-TECH
+-<%-- 
+Document   : Chat
+Created on : May 8, 2021, 4:07:26 PM
+Author     : Pro-TECH
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,51 +16,51 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-            <title>Chat</title>
+            <title>BabyGlow : Community</title>
             <link rel="icon" type="image/png" href="../../Assets/Templates/friendskit/assets/img/favicon.png" />
             <!-- Fonts -->
             <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
             <!-- Core CSS -->
             <link rel="stylesheet" href="../../Assets/Templates/friendskit/assets/css/app.css">
             <link rel="stylesheet" href="../../Assets/Templates/friendskit/assets/css/core.css">
-
+            
         </head>
-   
-    <body>
 
-        <!-- Pageloader -->
-        <div class="pageloader"></div>
-        <div class="infraloader is-active"></div>
+        <body>
 
-        <div class="chat-wrapper is-standalone">
-            <div class="chat-inner">
+            <!-- Pageloader -->
+            <div class="pageloader"></div>
+            <div class="infraloader is-active"></div>
 
-                <!-- Chat top navigation -->
-                <div class="chat-nav">
-                    <div class="nav-start">
-                        <div class="recipient-block">
-                            <div class="avatar-container">
-                                <img class="user-avatar" src="" alt="">
-                            </div>
-                            <div class="username">
-                                <span>Community</span>
+            <div class="chat-wrapper is-standalone">
+                <div class="chat-inner">
+
+                    <!-- Chat top navigation -->
+                    <div class="chat-nav">
+                        <div class="nav-start">
+                            <div class="recipient-block">
+                                <div class="avatar-container">
+                                    <img class="user-avatar" src="" alt="">
+                                </div>
+                                <div class="username">
+                                    <span>Community</span>
+                                </div>
                             </div>
                         </div>
+                        <div class="nav-end">
+
+                            <a href="../Homepage.jsp" class="chat-nav-item is-icon is-hidden-mobile">
+                                <i data-feather="home"></i>
+                            </a>
+
+                        </div>
                     </div>
-                    <div class="nav-end">
 
-                        <a href="../Homepage.jsp" class="chat-nav-item is-icon is-hidden-mobile">
-                            <i data-feather="home"></i>
-                        </a>
-
-                    </div>
-                </div>
-
-                <!-- Chat sidebar -->
-                <div id="chat-sidebar" class="users-sidebar">   
-                    <!-- User list -->
-                    <div class="conversations-list has-slimscroll-xs">
-                        <!-- User -->
+                    <!-- Chat sidebar -->
+                    <div id="chat-sidebar" class="users-sidebar">   
+                        <!-- User list -->
+                        <div class="conversations-list has-slimscroll-xs">
+                            <!-- User -->
                         <%
                             String selQry = "select * from tbl_user";
                             ResultSet rs = con.selectCommand(selQry);

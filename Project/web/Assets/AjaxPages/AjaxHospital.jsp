@@ -20,7 +20,7 @@
     while (rs.next()) {
 %>
 <tr>
-    <td><img src="../Assets/Files/<%=rs.getString("hospital_photo")%>" width="200" height="200"/></td>
+    <td><img src="../Assets/Files/<%=rs.getString("hospital_photo")%>" style="width: 200px; height: auto"/></td>
     <td><%=rs.getString("hospital_name")%></td>
     <td><%=rs.getString("hospital_address")%></td>
     <td>
@@ -31,8 +31,8 @@
         <%=rs1.getString("services_name")%>,
         <% }%>
 </tr>
-<tr align="right">
-    <td colspan="4"><a href="HospitalDetails.jsp?hospid=<%=rs.getString("hospital_id")%>">View More</a></td>
+<tr style="text-align: right">
+    <td colspan="4"><a style=" color: #DE0592 ;  text-decoration: underline ; text-align: right"  href="HospitalDetails.jsp?hospid=<%=rs.getString("hospital_id")%>">View More</a></td>
 </tr>
 
 <%

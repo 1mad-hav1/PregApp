@@ -43,12 +43,38 @@
         <link rel="stylesheet" href="../Assets/Templates/Main/style.css">
         <link rel="stylesheet" href="../Assets/Templates/Main/css/responsive.css">
         
-         <style>
-        .content-wrapper {
-            background-color: pink;
-            padding: 20px; /* Adjust padding as needed */
-        }
-    </style>
+        <style>
+            
+            
+            body {
+                background-color: #FFF1EE;
+            }
+
+             
+
+            /* Define styles for the table cells */
+            th{
+                padding: 10px;
+                /*border: 1px solid black;*/
+                font-weight: bold;
+                 text-align: center;
+                font-size: 15pt;
+            }
+            td {
+                padding: 10px;
+                /*border: 1px solid black;*/
+                text-align: center;
+                font-size: 15pt;
+            }
+            table {
+                /*background-color: #fff;  Change the background color here */
+                border-collapse: collapse; /* Optional: to collapse the borders between cells */
+                width: 100%; /* Optional: Set table width */
+            }
+           
+
+        </style>
+
     </head>
     <body>      
         <!--		 Preloader 
@@ -70,33 +96,33 @@
         <!-- Header Area -->
         <header class="header" >
             <!-- Topbar -->
-            <!--div class="topbar">
-                                            <div class="container">
-                                                    <div class="row">
-                                                            <div class="col-lg-6 col-md-5 col-12">
-                                                                     Contact 
-                                                                    <ul class="top-link">
-                                                                            <li><a href="#">About</a></li>
-                                                                            <li><a href="#">Doctors</a></li>
-                                                                            <li><a href="#">Contact</a></li>
-                                                                            <li><a href="#">FAQ</a></li>
-                                                                    </ul>
-            <!-- End Contact 
-    </div>
-    <div class="col-lg-6 col-md-7 col-12">
-             Top Contact 
-            <ul class="top-contact">
-                    <li><i class="fa fa-phone"></i>+880 1234 56789</li>
-                    <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
-            </ul>
-             End Top Contact 
-    </div>
-</div>
-</div>
-        </div>-->
+        <div class="topbar"  style="background-color: #FFF1EE;">
+            <div class="container">
+                <div class="row">
+                    <!--						<div class="col-lg-6 col-md-5 col-12">
+                                                                             Contact 
+                                                                            <ul class="top-link">
+                                                                                    <li><a href="#">About</a></li>
+                                                                                    <li><a href="./DoctorsList.jsp">Doctors</a></li>
+                                                                                    <li><a href="#">Contact</a></li>
+                                                                                    <li><a href="#">FAQ</a></li>
+                                                                            </ul>
+                                                                             End Contact 
+                                                                    </div>-->
+                    <div class="col-lg-6 col-md-7 col-12" >
+                        <!-- Top Contact -->
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>+91 1234567890</li>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:babyglow2024@gmail.com">babyglow2024@gmail.com</a></li>
+                        </ul>
+                        <!-- End Top Contact -->
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End Topbar -->
         <!-- Header Inner -->
-        <div class="header-inner">
+        <div class="header-inner"   style="background-color: #FFF1EE;">
             <div class="container">
                 <div class="inner">
                     <div class="row">
@@ -118,7 +144,7 @@
                                         <li><a href="./Homepage.jsp">Home</a></li>
                                         <li><a href="./MyProfile.jsp">My Profile </a></li>
                                         <li><a href="./ViewHospitals.jsp">View Hospitals</a></li>
-                                        <li><a href="./Chat/Chat.jsp">Chat</a></li>
+                                        <li><a href="./Chat/Chat.jsp">Community</a></li>
                                     </ul>
                                 </nav>
                             </div>

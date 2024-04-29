@@ -14,15 +14,13 @@
         <title>BabyGlow : Profile</title>
     </head>
     <body>
-         <%@include file="Header.jsp" %>
+        <%@include file="Header.jsp" %>
         <%
             if (request.getParameter("btneditprofile") != null) {
                 response.sendRedirect("../User/EditProfile.jsp");
-            }
-            else if (request.getParameter("btnchangepassword") != null) {
+            } else if (request.getParameter("btnchangepassword") != null) {
                 response.sendRedirect("../User/ChangePassword.jsp");
-            }
-            else if (request.getParameter("btnhome") != null) {
+            } else if (request.getParameter("btnhome") != null) {
                 response.sendRedirect("../User/Homepage.jsp");
             }
             String selQry = "select * from tbl_user where user_id='" + session.getAttribute("uid") + "'";
@@ -60,14 +58,14 @@
                 </tr>
                 <tr align="center">
                     <td colspan="2">
-                        <input type="submit" value="Edit Profile" name="btneditprofile">
-                        <input type="submit" value="Change Password" name="btnchangepassword">
-                        <input type="submit" value="Home" name="btnhome">
+                        <Button type="submit" name="btneditprofile" class="btn">Edit Profile</button>
+                        <Button type="submit" name="btnchangepassword" class="btn">Change Password</Button>
+                        <Button  type="submit" name="btnhome" class="btn">Home</Button>
                     </td>
                 </tr>
                 <% }%>
             </table>
         </form>
     </body>
-     <%@include file="Footer.jsp" %>
+    <%@include file="Footer.jsp" %>
 </html>

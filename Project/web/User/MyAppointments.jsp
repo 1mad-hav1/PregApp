@@ -70,7 +70,7 @@
                     <td><%=rs.getString("services_name")%></td>
                     <td><%=rs.getString("hospital_name")%></td>
                     <% if (rs.getString("appointments_cancel") == null) {%>
-                    <td><a href="MyAppointments.jsp?can=<%=rs.getString("appointments_id")%>">Request Cancellation</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline" href="MyAppointments.jsp?can=<%=rs.getString("appointments_id")%>">Request Cancellation</a></td>
                     <% } else if (rs.getInt("appointments_cancel") == 0) { %>
                     <td> Request is on pending</td>
                     <% } else if (rs.getInt("appointments_cancel") == 1) { %>

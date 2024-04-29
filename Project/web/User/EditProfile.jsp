@@ -13,6 +13,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Edit Profile</title>
+        <style>
+            /* Define style for input type text */
+            input {
+                text-align: center; /* Align text at the center */
+                width: 100%;
+                height: 45px;
+            }
+        </style>
     </head>
     <body>
          <%@include file="Header.jsp" %>
@@ -64,9 +72,9 @@
                     </td>
                     <td><textarea name="txtaddress" rows="3"><%=urs.getString("user_address")%></textarea></td>
                 </tr>
-                <tr align="center">
-                    <td colspan="2"><input type="submit" value="Submit" name="btnsubmit" ></td>
-                </tr>
+                <td colspan="2">
+                        <Button type="submit" name="btnsubmit" class="btn">Submit</button>
+                    </td>
             </table>
             <% }%>
         </form>

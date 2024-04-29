@@ -90,7 +90,7 @@
                         <br>
                         <% }%>
                     </td>                   
-                    <td><a href="BookSchedule.jsp?on=0&sid=<%=rs1.getString("schedule_id")%>">Book Appointment</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline"  href="BookSchedule.jsp?on=0&sid=<%=rs1.getString("schedule_id")%>">Book Appointment</a></td>
                 </tr>
                 <tr align="center">
                     <% }
@@ -167,7 +167,7 @@
                         <br>
                         <% }%>
                     </td>                   
-                    <td><a href="BookSchedule.jsp?sid=<%=rso1.getString("schedule_id")%>&on=1">Book Appointment</a></td>
+                    <td><a style=" color: #DE0592 ;  text-decoration: underline"  href="BookSchedule.jsp?sid=<%=rso1.getString("schedule_id")%>&on=1">Book Appointment</a></td>
                 </tr>
                 <tr align="center">
                     <% }

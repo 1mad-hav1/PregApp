@@ -47,7 +47,8 @@
                     <th>Name</th>
                     <th>Service</th>
                 </tr>
-                <%                            int i = 0, rowCount = 0;
+                <%                            
+                    int i = 0, rowCount = 0;
                     String selQry = "select * from tbl_hospital u inner join tbl_place p on u.place_id=p.place_id ";
                     ResultSet rs = con.selectCommand(selQry);
                     while (rs.next()) {
@@ -64,7 +65,7 @@
                 %>
                 <tr align="center">
                     <td ><%=i%></td>
-                    <td " colspan="2" align="center">
+                    <td colspan="2" align="center">
                         <img align="top" src="../Assets/Files/<%=rs.getString("hospital_logo")%>" width="120" height="120"/>
                         <img src="../Assets/Files/<%=rs.getString("hospital_photo")%>" width="200" height="200"/>
                         <%=rs.getString("hospital_name")%>
@@ -107,13 +108,6 @@
         </form>
     </body>
     <%--<%@include file="Footer.jsp" %>--%>
-<<<<<<< HEAD
-<<<<<<< HEAD
-</html>
-=======
-=======
->>>>>>> 939bd4d311f210efd5cd0021e33d0572bdb7059a
+
 </html>
 
-
->>>>>>> 939bd4d311f210efd5cd0021e33d0572bdb7059a

@@ -3,10 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/PregApp/Project/web/Hospital/ViewSchedules.jsp</file>
-            <file>file:/D:/PregApp/Project/web/Hospital/AddSchedule.jsp</file>
-            <file>file:/D:/PregApp/Project/web/Hospital/DoctorsList.jsp</file>
-            <file>file:/D:/PregApp/Project/web/Hospital/UpdateSchedule.jsp</file>
+            <file>file:/D:/PregApp/Project/web/User/Homepage.jsp</file>
+            <file>file:/D:/PregApp/Project/web/Hospital/ViewAppointments.jsp</file>
         </group>
     </open-files>
 </project-private>

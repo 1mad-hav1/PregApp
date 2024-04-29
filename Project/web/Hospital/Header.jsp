@@ -81,7 +81,7 @@
 
         </style>
 
-    </style>
+   
 </head>
 <body>      
     <!--		 Preloader 
