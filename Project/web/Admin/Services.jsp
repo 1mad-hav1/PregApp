@@ -14,6 +14,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Services</title>
+    <style>
+        /* CSS for table borders */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merge borders for adjacent cells */
+        }
+        th, td {
+            border-bottom: 1px solid #000; /* Border at the bottom of cells */
+            padding: 8px; /* Add padding for better spacing */
+        }
+        td:not(:last-child) {
+            border-right: 1px solid #000; /* Border on the right side of cells, except for the last cell in each row */
+        }
+        th {
+            background-color: #f2f2f2; /* Gray background for header cells */
+        }
+    </style>
     </head>
     <body>
         <%@include file="Header.jsp" %>
@@ -53,14 +70,14 @@
 
 
         <form method="post" name="frmServices">
-            <table>
+            <table style="width: 100%; font-size: 24px; border: 1px solid #000;">
                 <tr>
                     <td>Service Name</td>
                     <td><input type="text" name="txtservice" placeholder="Enter Service" required=""></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <input type="submit" name="btnsubmit" value="Save">
+                        <input type="submit" name="btnsubmit" value="Save" style="background-color: pink; border-radius: 10px; border: 1px solid pink;">
                     </td>
                 </tr>
             </table>
@@ -69,7 +86,7 @@
 </html>
 
 
-<table border="1" align="center">
+<table style="width: 100%; font-size: 24px; border: 1px solid #000;">
 
 
     <tr >

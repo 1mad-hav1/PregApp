@@ -13,6 +13,42 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BabyGlow : Hospital List</title>
+        <style>
+        /* CSS for table borders */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border-bottom: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Alternate row background color */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Remove default link styles */
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        /* Center the Hospitals List heading */
+        th[colspan="13"] {
+            text-align: center;
+        }
+        /* Style the action cells */
+        .action-cell {
+            border-right: none; /* Remove right border */
+        }
+        /* Add vertical borders for columns */
+        th:not(:last-child), td:not(:last-child):not(.no-border) {
+            border-right: 1px solid #000;
+        }
+    </style>
     </head>
     <body>
 
@@ -28,9 +64,9 @@
             }
         %>
         <form name="frmHospitallistt" method="post">
-            <table  align="center" width="1300" border="1">
+            <table style="width: 100%; font-size: 14px; border: 1px solid #000;">
                 <tr>
-                    <th colspan="9" align="center">Hospitals List</th>
+                    <th colspan="13" style="text-align: center;">Hospitals List</th>
                 </tr>
                 <tr align="center">
                     <th rowspan="2">Sl no.</th>
@@ -41,7 +77,7 @@
                     <th rowspan="2">Place</th>
                     <th rowspan="2">Address</th>
                     <th colspan="2">Doctor</th>
-                    <th rowspan="2" colspan="3">Action</th>
+                    <th rowspan="2" colspan="3" class="action-cell">Action</th>
                 </tr>
                 <tr align="center">
                     <th>Name</th>
@@ -92,13 +128,13 @@
                         <% }%>
                     </td>
 
-                    <td><a href="../Assets/Files/<%=rs.getString("hospital_proof")%>">View Proof</a></td>
-                    <% if (rs.getInt("hospital_status") == 0) {%>
-                    <td ><a href="Hospitallist.jsp?acc=<%=rs.getString("hospital_id")%>">Accept</a></td>
-                    <td>Rejected</td>
-                    <% } else {%>
-                    <td>Accepted</td>
-                    <td ><a href="Hospitallist.jsp?rej=<%=rs.getString("hospital_id")%>">Reject</a></td>
+                    <td class="no-border"><a href="../Assets/Files/<%=rs.getString("hospital_proof")%>">View Proof</a></td>
+                    <% if (rs.getInt("hospital_status") == 0) { %>
+                    <td class="no-border"><a href="Hospitallist.jsp?acc=<%=rs.getString("hospital_id")%>">Accept</a></td>
+                    <td class="no-border">Rejected</td>
+                    <% } else { %>
+                    <td class="no-border">Accepted</td>
+                    <td class="no-border"><a href="Hospitallist.jsp?rej=<%=rs.getString("hospital_id")%>">Reject</a></td>
                     <% } %>
                 </tr>
                 <% }%>
@@ -107,7 +143,4 @@
 
         </form>
     </body>
-    <%--<%@include file="Footer.jsp" %>--%>
-
 </html>
-
